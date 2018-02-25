@@ -1,0 +1,6 @@
+Stream #0: <3250> total pixals, <1157> ones, <2093> zeros
+Stream #1: <3250> total pixals, <1162> ones, <2088> zeros
+Stream #2: <3250> total pixals, <1150> ones, <2100> zeros
+Stream #3: <3250> total pixals, <1149> ones, <2101> zeros
+
+Image Height: 130 pixels
