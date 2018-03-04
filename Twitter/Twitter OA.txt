@@ -1,0 +1,214 @@
+截图链接
+https://drive.google.com/drive/folders/0B2J9B9HacPUXczlub2xiWF83ajA
+
+SQL
+
+1.  Student and Department
+
+   ```sql
+   select d.Name, count(e.ID) as ID_COUNT
+   from Department d
+   left join Employee e
+   on e.DEPT_ID = d.DEPT_ID
+   group by d.Name
+   order by ID_COUNT desc, NAME
+
+   SELECT
+       d.DEPT_NAME,
+       COUNT(s.STUDENT_ID)
+   FROM
+       Departments d 
+       LEFT OUTER JOIN Students s ON d.DEPT_ID = s.DEPT_ID
+   GROUP by
+       d.DEPT_ID
+   ORDER by
+       COUNT(s.STUDENT_ID) DESC, 
+       d.DEPT_NAME ASC
+   ```
+
+2. Leetcode Investments in 2016
+
+   ```sql
+   SELECT SUM(insurance.TIV_2016) AS TIV_2016
+   FROM insurance
+   WHERE insurance.TIV_2015 IN -- meet the creteria #1
+       (
+          SELECT TIV_2015
+           FROM insurance
+           GROUP BY TIV_2015
+           HAVING COUNT(*) > 1
+           )
+   AND CONCAT(LAT, LON) IN -- meet the creteria #2
+       (
+         SELECT CONCAT(LAT, LON) -- trick to take the LAT and LON as a pair
+         FROM insurance
+         GROUP BY LAT , LON
+         HAVING COUNT(*) = 1
+   )
+   ;
+
+   SELECT SUM(t1.TIV_2012)
+   FROM Insurance t1
+   INNER JOIN
+   (
+       SELECT TIV_2011
+       FROM Insurance
+       GROUP BY TIV_2011
+       HAVING COUNT(*) > 1
+   ) t2
+       ON t1.TIV_2011 = t2.TIV_2011
+   INNER JOIN
+   (
+       SELECT lat, lon
+       FROM Insurance
+       GROUP BY lat, lon
+       HAVING COUNT(*) = 1
+   ) t3
+       ON t1.lat = t3.lat AND
+          t1.lon = t3.lon
+          
+   SELECT CAST(SUM(t1.TIV_2012) as DECIMAL(11,2)) 
+
+   SELECT ROUND(SUM(TIV_2012), 2)
+   FROM Insurance
+   WHERE Insurance.PID IN (
+   SELECT I1.PID
+   FROM Insurance as I1, Insurance as I2
+   WHERE I1.TIV_2011 = I2.TIV_2011 AND I1.PID != I2.PID)
+   AND Insurance.PID NOT IN (
+   SELECT I1.PID Ii
+   FROM Insurance I1, Insurance I2
+   WHERE I1.LAT = I2.LAT AND I1.LON = I2.LON AND I1.PID != I2.PID);
+   ```
+
+   3. Tree & Nodes
+
+
+   ```sql
+SELECT BT.N,
+       CASE
+           WHEN BT.P IS NULL THEN 'Root'
+           WHEN EXISTS (SELECT B.P FROM BST B WHERE B.P = BT.N) THEN 'Inner'        
+           ELSE 'Leaf'
+       END
+   FROM BST AS BT 
+   ORDER BY BT.N
+
+   SELECT ID, 
+       CASE
+           WHEN P_ID IS NULL THEN 'ROOT' 
+           WHEN (SELECT COUNT(*) FROM TREE WHERE P_ID = T.ID) THEN 'INNER' 
+           ELSE 'LEAF' 
+       END
+   FROM TREE as T
+   ORDER BY ID
+   ```
+
+4. Orders 1
+
+   ```sql
+   SELECT
+       customer_number
+   FROM
+       orders
+   GROUP BY customer_number
+   ORDER BY COUNT(*) DESC
+   LIMIT 1
+
+   select o.customerNumber as customer
+   from ORDERS as o
+   group by customerNumber
+   order by count(orderNumber) desc
+   limit 1;
+   ```
+
+
+Algorithms
+
+1. Evaluate Expression Tree Favorite
+
+2. Information Mask ok
+
+   屏蔽某些关键字
+
+   ```
+   while 1:
+       try:
+           target = raw_input()
+           if target[0] == "E":
+               target = target.replace(" ","").
+               domain = "@"+target.split("@")[1]
+               user = target.split("@")[0].split(":")[1]. 
+               userp = user[0]+"*"*5+user[-1]. 
+               print "E:" + userp + domain
+           elif target[0] == "P":
+               target = target.replace(" ","").replace("-","").replace(")","").replace("(",""). Waral
+               target = target.split(":")[1]
+               country = target[:-10]
+               phone = "***-***-" + target[-4:]
+               if country:
+                   lenth = len(country)-1
+                   country = "+" + "*" * lenth + "-"
+               print "P:" + country + phone
+       except:
+           break
+   ```
+
+   ​
+
+3. Ways to complete Kraken ok
+
+   Unique Path DP 变种
+
+4. Searching a Log File 
+
+5. Longest Phrase in a tweet ok
+
+6. Time series aggregation 
+
+7. Tweet recommendation 
+
+   类似拓扑排序?
+
+8. Minimum Genetic Mutation
+
+9. Hacking Time ok
+
+   key:2512208/8251220
+
+10. word ladder
+
+  类似 Leetcode127， 只不过输入的是DNA string,  找最短变换次数。我用的就是LC127 的 double-ended-queue
+
+11. Apache Log
+
+    ```java
+    import java.util.Date;
+    import java.util.Locale;
+    import java.util.TimeZone;
+    import java.text.SimpleDateFormat;
+    . more info on 1point3acres.com
+    public class parseDate {
+            public static String dateparse(String s){
+                    SimpleDateFormat ForMatter = new SimpleDateFormat("yyyy/MM/dd'T'hh:mm");
+                    ForMatter.setTimeZone(TimeZone.getTimeZone("GMT"));
+                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy:hh:mm:ss Z", Locale.US);
+                    Date date = new Date();
+                    String res = new String();
+                    try{
+                            date = formatter.parse(s);
+                            res = ForMatter.format(date);
+                    }
+                    catch(Exception e){
+                            e.printStackTrace();
+                    }
+                    
+                    return res;. visit 1point3acres.com for more.
+            }
+            . From 1point 3acres bbs
+            public static void main(String[] args){
+                    System.out.println(dateparse("08/Sep/2015:10:55:15 +0000"));
+                    System.out.println(dateparse("31/Nov/2012:05:00:18 +0300"));
+            }
+    }
+    ```
