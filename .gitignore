@@ -1,0 +1,7 @@
+*~
+*.log
+*.egg-info/
+*.db
+*.pyc
+.DS_Store
+CMakeLists.txt
