@@ -1,0 +1,403 @@
+modules: []
+exported_table_schema:
+- id: 9366
+  columns:
+    ZXN0OeSjrSw=:
+      name: last_login
+      type: datetime
+      admin_ui: {order: 4, width: 200}
+    ZzV_I4GXqqc=:
+      name: confirmed_email
+      type: bool
+      admin_ui: {order: 3, width: 200}
+    dbO4r1cb6r8=:
+      name: password_hash
+      type: string
+      admin_ui: {order: 2, width: 200}
+    q5x0PhBAVLM=:
+      name: enabled
+      type: bool
+      admin_ui: {order: 1, width: 100}
+    vsbkgy1G594=:
+      name: stripe_customer
+      type: string
+      admin_ui: {order: 5, width: 200}
+    xOqD5m77cfY=:
+      name: email
+      type: string
+      admin_ui: {order: 0, width: 200}
+  name: Users
+  server: full
+  client: none
+  python_name: users
+- id: 9367
+  columns:
+    F_GL4JA67aQ=:
+      name: company_name
+      type: string
+      admin_ui: {order: 3, width: 200}
+    Iv2ggLoBehU=:
+      name: symbol
+      type: string
+      admin_ui: {order: 0, width: 200}
+    LUGHIS9isvE=:
+      name: notes
+      type: string
+      admin_ui: {order: 2, width: 200}
+    i317nrI2_nw=:
+      name: user
+      type: liveObject
+      backend: anvil.tables.Row
+      admin_ui: {order: 1, width: 200}
+      table_id: 9366
+  name: Stocks
+  server: full
+  client: none
+  python_name: stocks
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: false, use_email: true,
+    confirm_email: true, allow_remember_me: true, remember_me_days: 30}
+  server_config: {user_table: 9366}
+- source: /runtime/services/stripe.yml
+  client_config: {}
+  server_config: {}
+forms:
+- code: "from anvil import *\nimport stripe.checkout\nimport anvil.server\nimport\
+    \ anvil.users\nimport tables\nfrom tables import app_tables\n\nclass EditStock\
+    \ (EditStockTemplate):\n  def __init__(self, **properties):\n    # You must call\
+    \ self.init_components() before doing anything else in this function\n    self.init_components(**properties)\n\
+    \n    # Any code you write here will run when the form opens."
+  class_name: EditStock
+  container:
+    type: ColumnPanel
+    properties: {col_widths: '{"ELABRI":15,"HNMQNB":45}'}
+  components:
+  - type: Label
+    properties: {}
+    name: symbol_lbl
+    layout_properties: {grid_position: 'FQILMV,JUKITJ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''symbol'']'}
+  - type: Label
+    properties: {role: null, width: default, align: right, border: '', foreground: '',
+      visible: true, text: 'Name:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'SGYJEK,ELABRI'}
+  - type: TextBox
+    properties: {role: null, width: default, align: left, hide_text: false, placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: name_box
+    layout_properties: {grid_position: 'SGYJEK,HNMQNB'}
+    data_bindings:
+    - {property: text, code: 'self.item[''company_name'']', writeback: true}
+  - type: Label
+    properties: {role: null, width: default, align: left, border: '', foreground: '',
+      visible: true, text: 'Notes:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'VMAUIL,TQTIHK'}
+  - type: TextArea
+    properties: {role: null, width: default, align: left, height: '', placeholder: Write some notes about the stock...,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: true, font: '', spacing_above: none, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: notes_area
+    layout_properties: {grid_position: 'RHWYZI,HKOBDV'}
+    data_bindings:
+    - {property: text, code: 'self.item[''notes'']', writeback: true}
+  item_type: {table_id: 9367}
+- code: "from anvil import *\nimport stripe.checkout\nimport anvil.server\nimport\
+    \ anvil.users\nimport tables\nfrom tables import app_tables\n\nclass HomePage\
+    \ (HomePageTemplate):\n  def __init__(self, **properties):\n    # You must call\
+    \ self.init_components() before doing anything else in this function\n    self.init_components(**properties)\n\
+    \n    # Any code you write here will run when the form opens.\n    self.stock_rpt.items\
+    \ = anvil.server.call('get_my_stocks')\n\n  def button_1_click (self, **event_args):\n\
+    \    # This method is called when the button is clicked\n    stock_row = anvil.server.call('add_stock',\
+    \ self.new_symbol_stock.text)\n    if stock_row is None:\n      alert(\"'%s' is\
+    \ an invalid stock, or you already have it in your portfolio\" % self.new_symbol_stock.text)\n\
+    \      self.new_symbol_stock.text=''\n      return\n    self.new_symbol_stock.text=''\n\
+    \    open_form('StockChart', item=stock_row)\n\n"
+  class_name: HomePage
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:dashboard.html'}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel
+    layout_properties: {slot: default}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_1
+      layout_properties: {grid_position: 'YNIFPK,PWWFLL'}
+      components:
+      - type: RepeatingPanel
+        properties: {item_template: ItemTemplate1}
+        name: stock_rpt
+        layout_properties: {grid_position: 'XAWQNU,JEFUCO'}
+      - type: TextBox
+        properties: {}
+        name: new_symbol_stock
+        layout_properties: {grid_position: 'WZTJKU,MOUKAA'}
+      - type: Button
+        properties: {role: null, width: default, align: left, border: '', enabled: true,
+          foreground: '', visible: true, text: Add Stock, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: 'fa:plus'}
+        name: button_1
+        layout_properties: {grid_position: 'WZTJKU,XJLVLP'}
+        event_bindings: {click: button_1_click}
+- code: "from anvil import *\nimport stripe.checkout\nimport anvil.server\nimport\
+    \ anvil.users\nimport tables\nfrom tables import app_tables\n\nclass ItemTemplate1(ItemTemplate1Template):\n\
+    \n  def __init__(self, **properties):\n    # You must call self.init_components()\
+    \ before doing anything else in this function\n    self.init_components(**properties)\n\
+    \n    # Any code you write here will run when the form opens.\n\n  def symbol_lnk_click\
+    \ (self, **event_args):\n    # This method is called when the link is clicked\n\
+    \    open_form('StockChart', item=self.item)\n\n"
+  class_name: ItemTemplate1
+  container:
+    type: ColumnPanel
+    properties: {col_widths: '{"ZVXAJY":15,"MJDGWC":45}'}
+  components:
+  - type: Link
+    properties: {role: null, width: default, align: left, border: '', foreground: '',
+      visible: true, text: symbol, font_size: null, row_spacing: 10, wrap_on: mobile,
+      font: '', spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:building'}
+    name: symbol_lnk
+    layout_properties: {grid_position: 'WBRAFE,ZVXAJY'}
+    data_bindings:
+    - {property: text, code: 'self.item[''symbol'']'}
+    event_bindings: {click: symbol_lnk_click}
+  - type: Label
+    properties: {}
+    name: name_lbl
+    layout_properties: {grid_position: 'WBRAFE,MJDGWC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''company_name'']'}
+  item_type: {table_id: 9367}
+- code: "from anvil import *\nimport stripe.checkout\nimport anvil.server\nimport\
+    \ anvil.users\nimport tables\nfrom tables import app_tables\n\nclass LoginPage\
+    \ (LoginPageTemplate):\n  def __init__(self, **properties):\n    # You must call\
+    \ self.init_components() before doing anything else in this function\n    self.init_components(**properties)\n\
+    \n    # Any code you write here will run when the form opens.\n    \n  def form_show\
+    \ (self, **event_args):\n    # This method is called when the HTML panel is shown\
+    \ on the screen\n    while not anvil.users.get_user():\n      anvil.users.login_with_form()\n\
+    \      \n    if anvil.server.call('is_paying_subscriber'):\n      open_form('HomePage')\n\
+    \    else:\n      self.payment_pnl.visible = True\n\n  def pay_btn_click (self,\
+    \ **event_args):\n    # This method is called when the button is clicked\n   \
+    \ token, user_details = stripe.checkout.get_token(amount=5000, currency=\"USD\"\
+    , title=\"Stock Tracker subscription\")\n    anvil.server.call('setup_new_subscription',\
+    \ token, user_details)\n    open_form('HomePage')\n\n\n\n\n"
+  class_name: LoginPage
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:dashboard.html'}
+    event_bindings: {show: form_show}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel
+    layout_properties: {slot: default}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: payment_pnl
+      layout_properties: {grid_position: 'MVXLIZ,UIIGCH'}
+      components:
+      - type: Label
+        properties: {role: null, width: default, align: left, border: '', foreground: '',
+          visible: true, text: 'Please enter your credit card details to use this
+            service:', font_size: null, font: '', spacing_above: small, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: false, underline: false,
+          icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'HUKTGR,DMUYUU'}
+      - type: Button
+        properties: {role: null, width: default, align: center, border: '', enabled: true,
+          foreground: '', visible: true, text: Pay, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: 'fa:credit-card'}
+        name: pay_btn
+        layout_properties: {grid_position: 'IUQWBM,CEVJPT'}
+        event_bindings: {click: pay_btn_click, show: pay_btn_show}
+  - type: Label
+    properties: {role: null, width: default, align: left, border: '', foreground: '',
+      visible: true, text: Log in, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {slot: title}
+- code: "from anvil import *\nimport stripe.checkout\nimport anvil.users\nimport tables\n\
+    from tables import app_tables\nimport anvil.server\nfrom plotly import graph_objs\
+    \ as go\nfrom EditStock import EditStock\n\nclass StockChart (StockChartTemplate):\n\
+    \  def __init__(self, **properties):\n    # You must call self.init_components()\
+    \ before doing anything else in this function\n    self.init_components(**properties)\n\
+    \n    # Any code you write here will run when the form opens.\n    # Plot the\
+    \ stock price of apple\n    prices = anvil.server.call('get_stock_price', self.item['symbol'])\n\
+    \    self.plot_1.data = go.Scatter(x=[p['date'] for p in prices],\n          \
+    \                        y=[p['close'] for p in prices],\n                   \
+    \               fill='tozeroy')\n                              \n            \
+    \               \n\n  def link_1_click (self, **event_args):\n    # This method\
+    \ is called when the link is clicked\n    open_form('HomePage')\n\n  def button_1_click\
+    \ (self, **event_args):\n    # This method is called when the button is clicked\n\
+    \    if confirm(\"Remove '%s' (%s) from your portfolio?\" % (self.item['company_name'],\
+    \ self.item['symbol'])):\n      anvil.server.call('remove_stock', self.item)\n\
+    \      open_form('HomePage')\n      \n\n  def button_2_click (self, **event_args):\n\
+    \    # This method is called when the button is clicked\n    es = EditStock(item=self.item)\n\
+    \    alert(es, title=\"Edit Stock\")\n    self.refresh_data_bindings()\n\n\n\n"
+  class_name: StockChart
+  container:
+    type: HtmlTemplate
+    properties: {html: '@theme:dashboard.html'}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel
+    layout_properties: {slot: default}
+    components:
+    - type: Label
+      properties: {}
+      name: label_2
+      layout_properties: {grid_position: 'KRWNYB,VHEPHC'}
+      data_bindings:
+      - {property: text, code: 'self.item[''company_name'']'}
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_1
+      layout_properties: {grid_position: 'PPRHLL,SPUMQP'}
+      components:
+      - type: Plot
+        properties: {}
+        name: plot_1
+        layout_properties: {grid_position: 'ESTNJE,GOVCZE'}
+    - type: Label
+      properties: {role: null, width: default, align: left, border: '', foreground: '',
+        visible: true, text: Notes, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'EWOQGM,NNWPUR'}
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_2
+      layout_properties: {grid_position: 'LEUIQX,OEHXCT'}
+      components:
+      - type: Label
+        properties: {}
+        name: notes_lbl
+        layout_properties: {grid_position: 'PABBMD,VXUROQ'}
+        data_bindings:
+        - {property: text, code: 'self.item[''notes'']'}
+      - type: Button
+        properties: {role: null, width: default, align: right, border: '', enabled: true,
+          foreground: '', visible: true, text: Edit, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: 'fa:pencil'}
+        name: button_2
+        layout_properties: {grid_position: 'ZLNBOL,JRSWAH'}
+        event_bindings: {click: button_2_click}
+      data_bindings: []
+    - type: Button
+      properties: {role: null, width: default, align: center, border: '', enabled: true,
+        foreground: '#ffffff', visible: true, text: Remove from Portfolio, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#b51e22', bold: false, underline: false, icon: 'fa:trash'}
+      name: button_1
+      layout_properties: {grid_position: 'SXKXGZ,QFEBEQ'}
+      event_bindings: {click: button_1_click}
+  - type: Link
+    properties: {role: null, width: default, align: left, border: '', foreground: '',
+      visible: true, text: Home, font_size: null, row_spacing: 10, wrap_on: mobile,
+      font: '', spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'fa:home'}
+    name: home_lnk
+    layout_properties: {slot: nav-right}
+    event_bindings: {click: link_1_click}
+  - type: Label
+    properties: {}
+    name: label_1
+    layout_properties: {slot: title}
+    data_bindings:
+    - {property: text, code: 'self.item[''symbol'']'}
+  item_type: {table_id: 9367}
+package_name: MaterialDesign1
+name: MaterialDesign1
+runtime_options: {server_version: python2-sandbox}
+startup_form: LoginPage
+dependency_code: {}
+theme:
+  templates:
+  - name: Card-based layout with sidebar
+    description: A page with a card-based layout, and a sidebar menu for links
+    img: img/form-templates/dashboard.png
+    form:
+      class_name: Form
+      container:
+        type: HtmlTemplate
+        properties: {html: '@theme:dashboard.html'}
+      components:
+      - type: ColumnPanel
+        properties: {}
+        name: content_panel
+        layout_properties: {slot: default}
+      code: "from anvil import *\n\nclass $NAME$($NAME$Template):\n\n  def __init__(self,\
+        \ **properties):\n    # You must call self.init_components() before doing\
+        \ anything else in this function\n    self.init_components(**properties)\n\
+        \n    # Any code you write here will run when the form opens.\n    \n"
+  - name: Single-column layout
+    description: A page with a single-column layout and a large header
+    img: img/form-templates/material-single-column.png
+    form:
+      class_name: Form
+      container:
+        type: HtmlTemplate
+        properties: {html: '@theme:single-column.html'}
+      components: []
+      code: "from anvil import *\n\nclass $NAME$($NAME$Template):\n\n  def __init__(self,\
+        \ **properties):\n    # You must call self.init_components() before doing\
+        \ anything else in this function\n    self.init_components(**properties)\n\
+        \n    # Any code you write here will run when the form opens.\n"
+  parameters:
+    roles:
+    - name: title
+      components: [Label]
+  assets:
+  - {name: theme.css, content: Ym9keSAqIHsNCiAgYm94LXNpemluZzogYm9yZGVyLWJveDsNCn0NCg0KYm9keSB7DQogIGZvbnQtZmFtaWx5OiAiUm9ib3RvIjsNCiAgbWFyZ2luOiAwOw0KICBtaW4taGVpZ2h0OiAxMDAlOw0KfQ0KDQpib2R5LmFudmlsLXNob3ctYmFubmVyICNhcHBHb2VzSGVyZSB7DQogICAgbWFyZ2luLXRvcDogNTBweDsNCiAgICBwb3NpdGlvbjogcmVsYXRpdmU7DQp9DQoNCi5ib2R5IHsNCiAgYmFja2dyb3VuZC1jb2xvcjogI2Q3ZDdkNzsNCn0NCg0KYSwgYTp2aXNpdGVkIHsNCiAgY29sb3I6ICMwMDk2ODg7DQp9DQoNCmE6aG92ZXIsIGE6YWN0aXZlLCBhOmZvY3VzIHsNCiAgY29sb3I6ICMwMDc5NkI7IC8qIE1hdGVyaWFsIGRlc2lnbjogVGVhbCA3MDAgKi8NCn0NCg0KLnBsYWNlaG9sZGVyIHsNCiAgcGFkZGluZzogNXB4Ow0KICBib3JkZXI6IDJweCBkYXNoZWQgIzg4ODsNCn0NCg0KLm5hdiB7DQogIHBvc2l0aW9uOiBhYnNvbHV0ZTsNCiAgdG9wOiAwOw0KICBsZWZ0OiAwOw0KICB3aWR0aDogMTAwJTsNCg0KICBvdmVyZmxvdy15OiBoaWRkZW47DQoNCiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsNCiAgZm9udC13ZWlnaHQ6IGJvbGQ7DQoNCiAgYm94LXNoYWRvdzogMCAxcHggM3B4ICM4ODg7DQoNCg0KICAtd2Via2l0LXRvdWNoLWNhbGxvdXQ6IG5vbmU7DQogIC13ZWJraXQtdXNlci1zZWxlY3Q6IG5vbmU7DQogIC1raHRtbC11c2VyLXNlbGVjdDogbm9uZTsNCiAgLW1vei11c2VyLXNlbGVjdDogbm9uZTsNCiAgLW1zLXVzZXItc2VsZWN0OiBub25lOw0KICB1c2VyLXNlbGVjdDogbm9uZTsNCn0NCg0KLm5hdi1yaWdodCB7DQogIGZsb2F0OiByaWdodDsNCiAgY29sb3I6ICMzMzM7DQp9DQoNCi5uYXYtZWx0IHsNCiAgZGlzcGxheTogaW5saW5lLWJsb2NrOw0KICB2ZXJ0aWNhbC1hbGlnbjogdG9wOw0KICBtYXJnaW4tbGVmdDogMTBweDsNCiAgcG9zaXRpb246IHJlbGF0aXZlOw0KfQ0KDQoubmF2LWVsdC5wbGFjZWhvbGRlciB7DQogIG1hcmdpbi10b3A6IDVweDsNCiAgb3BhY2l0eTogMC44Ow0KICBjb2xvcjogIzg4ODsNCiAgdmlzaWJpbGl0eTogaGlkZGVuOw0KfQ0KDQpib2R5LmFudmlsLWhpZ2hsaWdodCAubmF2LWVsdC5wbGFjZWhvbGRlciB7DQogIHZpc2liaWxpdHk6IHZpc2libGU7DQp9DQoNCi5uYXYtZWx0IC5kcm9wLWhlcmUgew0KICBwb3NpdGlvbjogYWJzb2x1dGU7DQogIHRvcDogMDsNCiAgbGVmdDogLTcuNXB4Ow0KICBib3R0b206IDA7DQogIHdpZHRoOiA1cHg7DQp9DQoNCi5hbnZpbC1yb2xlLXRpdGxlIHsNCiAgZm9udC1zaXplOiAxNnB4Ow0KICBmb250LXdlaWdodDogYm9sZDsNCn0NCg0KDQovKiBSZXNwb25zaXZlIGJpdHM6IE1ha2UgdGhlIG1lbnUgb3ZlcmxheSB0aGUgc2NyZWVuDQogICAoYW5kIGhpZGRlbiBieSBkZWZhdWx0KSByYXRoZXIgdGhhbiBkaXNwbGFjaW5nIGl0DQogICBvbiBzbWFsbCBzY3JlZW5zDQoqLw0KDQpAbWVkaWEobWF4LXdpZHRoOjc2N3B4KSB7DQoNCiAgLmNhcmRzIHsNCiAgICBwYWRkaW5nOiAyNHB4IDBweDsNCiAgfQ0KDQp9DQoNCg0KLyogRnJvbSBodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvICovDQovKiBjeXJpbGxpYy1leHQgKi8NCkBmb250LWZhY2Ugew0KICBmb250LWZhbWlseTogJ1JvYm90byc7DQogIGZvbnQtc3R5bGU6IG5vcm1hbDsNCiAgZm9udC13ZWlnaHQ6IDQwMDsNCiAgc3JjOiBsb2NhbCgnUm9ib3RvJyksIGxvY2FsKCdSb2JvdG8tUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MTYvZWs0Z3paLUdlWEFQY1NiSHRDZVFJX2VzWlcyeE9RLXhzTnFPNDdtNTVEQS53b2ZmMikgZm9ybWF0KCd3b2ZmMicpOw0KICB1bmljb2RlLXJhbmdlOiBVKzA0NjAtMDUyRiwgVSsyMEI0LCBVKzJERTAtMkRGRiwgVStBNjQwLUE2OUY7DQp9DQovKiBjeXJpbGxpYyAqLw0KQGZvbnQtZmFjZSB7DQogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsNCiAgZm9udC1zdHlsZTogbm9ybWFsOw0KICBmb250LXdlaWdodDogNDAwOw0KICBzcmM6IGxvY2FsKCdSb2JvdG8nKSwgbG9jYWwoJ1JvYm90by1SZWd1bGFyJyksIHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YxNi9tRXJ2TEJZZ19jWEczckx2VXNLVF9mZXNaVzJ4T1EteHNOcU80N201NURBLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7DQogIHVuaWNvZGUtcmFuZ2U6IFUrMDQwMC0wNDVGLCBVKzA0OTAtMDQ5MSwgVSswNEIwLTA0QjEsIFUrMjExNjsNCn0NCi8qIGdyZWVrLWV4dCAqLw0KQGZvbnQtZmFjZSB7DQogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsNCiAgZm9udC1zdHlsZTogbm9ybWFsOw0KICBmb250LXdlaWdodDogNDAwOw0KICBzcmM6IGxvY2FsKCdSb2JvdG8nKSwgbG9jYWwoJ1JvYm90by1SZWd1bGFyJyksIHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YxNi8tMm4ycC1fWTA4c2c1N0NOV1FmS052ZXNaVzJ4T1EteHNOcU80N201NURBLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7DQogIHVuaWNvZGUtcmFuZ2U6IFUrMUYwMC0xRkZGOw0KfQ0KLyogZ3JlZWsgKi8NCkBmb250LWZhY2Ugew0KICBmb250LWZhbWlseTogJ1JvYm90byc7DQogIGZvbnQtc3R5bGU6IG5vcm1hbDsNCiAgZm9udC13ZWlnaHQ6IDQwMDsNCiAgc3JjOiBsb2NhbCgnUm9ib3RvJyksIGxvY2FsKCdSb2JvdG8tUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MTYvdTBUT3BtMDgyTU5rUzVLMFE0cmhxdmVzWlcyeE9RLXhzTnFPNDdtNTVEQS53b2ZmMikgZm9ybWF0KCd3b2ZmMicpOw0KICB1bmljb2RlLXJhbmdlOiBVKzAzNzAtMDNGRjsNCn0NCi8qIHZpZXRuYW1lc2UgKi8NCkBmb250LWZhY2Ugew0KICBmb250LWZhbWlseTogJ1JvYm90byc7DQogIGZvbnQtc3R5bGU6IG5vcm1hbDsNCiAgZm9udC13ZWlnaHQ6IDQwMDsNCiAgc3JjOiBsb2NhbCgnUm9ib3RvJyksIGxvY2FsKCdSb2JvdG8tUmVndWxhcicpLCB1cmwoaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbS9zL3JvYm90by92MTYvTmRGOU10bk9wTHpvLW5vTW9HMG1pUGVzWlcyeE9RLXhzTnFPNDdtNTVEQS53b2ZmMikgZm9ybWF0KCd3b2ZmMicpOw0KICB1bmljb2RlLXJhbmdlOiBVKzAxMDItMDEwMywgVSsxRUEwLTFFRjksIFUrMjBBQjsNCn0NCi8qIGxhdGluLWV4dCAqLw0KQGZvbnQtZmFjZSB7DQogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsNCiAgZm9udC1zdHlsZTogbm9ybWFsOw0KICBmb250LXdlaWdodDogNDAwOw0KICBzcmM6IGxvY2FsKCdSb2JvdG8nKSwgbG9jYWwoJ1JvYm90by1SZWd1bGFyJyksIHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YxNi9GY3g3V3d2OE96VDcxQTNFMVhPQWp2ZXNaVzJ4T1EteHNOcU80N201NURBLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7DQogIHVuaWNvZGUtcmFuZ2U6IFUrMDEwMC0wMjRGLCBVKzFFMDAtMUVGRiwgVSsyMEEwLTIwQUIsIFUrMjBBRC0yMENGLCBVKzJDNjAtMkM3RiwgVStBNzIwLUE3RkY7DQp9DQovKiBsYXRpbiAqLw0KQGZvbnQtZmFjZSB7DQogIGZvbnQtZmFtaWx5OiAnUm9ib3RvJzsNCiAgZm9udC1zdHlsZTogbm9ybWFsOw0KICBmb250LXdlaWdodDogNDAwOw0KICBzcmM6IGxvY2FsKCdSb2JvdG8nKSwgbG9jYWwoJ1JvYm90by1SZWd1bGFyJyksIHVybChodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvcm9ib3RvL3YxNi9DV0IwWFlBOGJ6bzBrU1RoWDBVVHVBLndvZmYyKSBmb3JtYXQoJ3dvZmYyJyk7DQogIHVuaWNvZGUtcmFuZ2U6IFUrMDAwMC0wMEZGLCBVKzAxMzEsIFUrMDE1Mi0wMTUzLCBVKzAyQzYsIFUrMDJEQSwgVSswMkRDLCBVKzIwMDAtMjA2RiwgVSsyMDc0LCBVKzIwQUMsIFUrMjIxMiwgVSsyMjE1Ow0KfQ==}
+  - {name: single-column.html, content: PHN0eWxlPg0KICANCiAgYm9keSwgaHRtbCB7DQogICAgbWFyZ2luOiAwOw0KICAgIHBhZGRpbmc6IDA7DQogICAgZm9udC1mYW1pbHk6ICJIZWx2ZXRpY2EiLCJBcmlhbCIsc2Fucy1zZXJpZjsNCiAgfQ0KICAgIA0KICBoMSxoMixoMyxoNCxoNSxoNiB7DQogICAgZm9udC1mYW1pbHk6ICJSb2JvdG8iLCJIZWx2ZXRpY2EiLCJBcmlhbCIsc2Fucy1zZXJpZjsNCiAgfQ0KDQogIGhlYWRlciB7DQogICAgZm9udC1mYW1pbHk6ICJSb2JvdG8iLCJIZWx2ZXRpY2EiLCJBcmlhbCIsc2Fucy1zZXJpZjsNCiAgICBwYWRkaW5nOiAwcHggNDBweDsNCiAgICBoZWlnaHQ6IDY0cHg7DQogICAgZGlzcGxheTogZmxleDsNCiAgICBmbGV4LXdyYXA6IG5vd3JhcDsNCiAgICBhbGlnbi1pdGVtczogY2VudGVyOw0KICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsNCiAgICBiYWNrZ3JvdW5kOiAjZjVmNWY1Ow0KICB9DQogIA0KICBoZWFkZXI+LnRpdGxlIHsNCiAgICBmb250LXNpemU6IDIwcHg7DQogIH0NCiAgDQogIGhlYWRlcj4ubmF2LWxpbmtzPnNwYW4gew0KICAgIG1hcmdpbjogMCAxMHB4Ow0KICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsNCiAgICBwb3NpdGlvbjogcmVsYXRpdmU7DQogICAgdmVydGljYWwtYWxpZ246IHRvcDsNCiAgfQ0KICANCiAgLnJpYmJvbiB7DQogICAgd2lkdGg6IDEwMCU7DQogICAgaGVpZ2h0OiA0MHZoOw0KICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDk2ODg7IC8qIzNGNTFCNTsqLw0KICB9DQogIA0KICANCiAgbWFpbiB7DQogICAgbWFyZ2luLXRvcDogLTM1dmg7DQogICAgZGlzcGxheTogZmxleDsNCiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOw0KICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7DQogICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOw0KICAgIG1pbi1oZWlnaHQ6IGNhbGMoOTV2aCAtIDY0cHgpOw0KICB9DQoNCiAgYm9keS5hbnZpbC1zaG93LWJhbm5lciBtYWluIHsNCiAgICBtaW4taGVpZ2h0OiBjYWxjKDk1dmggLSA2NHB4IC0gNTBweCk7DQogIH0NCiAgDQogIG1haW4+LmNhcmRzIHsNCiAgICB3aWR0aDogY2FsYyg2NyUgLSAxNnB4KTsNCiAgICBtYXgtd2lkdGg6IDk2MHB4Ow0KICB9DQogIA0KICBtYWluPi5jYXJkcz4uY2FyZCB7DQogICAgYmFja2dyb3VuZDogd2hpdGU7DQogICAgYm94LXNoYWRvdzogMCA0cHggNXB4IDAgcmdiYSgwLDAsMCwuMTQpLCAwIDFweCAxMHB4IDAgcmdiYSgwLDAsMCwuMTIpLCAwIDJweCA0cHggLTFweCByZ2JhKDAsMCwwLC4yKTsNCiAgICBtYXJnaW4tYm90dG9tOiA0MHB4Ow0KICAgIHBhZGRpbmc6IDYwcHg7DQogICAgYm9yZGVyLXJhZGl1czogMnB4Ow0KICB9DQogIA0KICBAbWVkaWEgKG1heC13aWR0aDogODM5cHgpIHsNCiAgICBtYWluPi5jYXJkcyB7DQogICAgICB3aWR0aDogY2FsYygxMDAlIC0gMTZweCk7DQogICAgfQ0KICAgIA0KICAgIG1haW4+LmNhcmRzPi5jYXJkIHsNCiAgICAgIHBhZGRpbmc6IDI4cHg7DQogICAgfQ0KICB9DQogIA0KICBtYWluPmZvb3RlciB7DQogICAgd2lkdGg6MTAwJTsNCiAgICBiYWNrZ3JvdW5kOiAjNDI0MjQyOw0KICAgIHBhZGRpbmc6IDMycHggNDBweDsNCiAgICBjb2xvcjogIzllOWU5ZTsNCiAgICBkaXNwbGF5OiBmbGV4Ow0KICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7DQogICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOw0KICB9DQogIA0KICBtYWluPmZvb3RlciBhIHsNCiAgICBjb2xvcjogIzllOWU5ZTsNCiAgfQ0KICANCiAgbWFpbj5mb290ZXI+ZGl2PnNwYW4gew0KICAgIG1hcmdpbjogMHB4IDEwcHg7DQogIH0NCiAgDQogIG1haW4+Zm9vdGVyPi5mb290ZXItbGlua3M+c3BhbiB7DQogICAgbWFyZ2luOiAwIDEwcHg7DQogICAgZGlzcGxheTogaW5saW5lLWJsb2NrOw0KICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsNCiAgICB2ZXJ0aWNhbC1hbGlnbjogdG9wOw0KICB9DQogDQogIC8qIEdsb2JhbCBvdmVycmlkZXMgKi8NCiAgDQogIC5hbnZpbC1icy1jb250YWluZXIgew0KICAgIHBhZGRpbmc6IDA7DQogIH0NCiAgDQogIC8qIERlc2lnbmVyIGZpeHVwcyAqLw0KICAuZGVzaWduZXIgLnJpYmJvbiB7DQogICAgaGVpZ2h0OiAzMDBweDsNCiAgfQ0KICAuZGVzaWduZXIgbWFpbiB7DQogICAgbWFyZ2luLXRvcDogLTIwMHB4Ow0KICAgIG1pbi1oZWlnaHQ6IDUwMHB4Ow0KICB9DQogIA0KICAvKiBEZXNpZ25lci1zcGVjaWZpYyBzdHlsZXMgKi8NCiAgLmxpbmstZHJvcC16b25lIHsNCiAgICBwb3NpdGlvbjogYWJzb2x1dGU7DQogICAgbGVmdDogLTEwcHg7DQogICAgd2lkdGg6IDVweDsNCiAgICBoZWlnaHQ6IDQwcHg7DQogIH0NCiAgLm5ldy1saW5rIHsNCiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7DQogICAgdmVydGljYWwtYWxpZ246IHRvcDsNCiAgICBwYWRkaW5nOiAxMHB4Ow0KICAgIG1hcmdpbi1sZWZ0OiAwICFpbXBvcnRhbnQ7DQogICAgYm9yZGVyOiAxcHggZG90dGVkICNiYmI7DQogIH0NCiAgW2FudmlsLWlmLXNsb3QtZW1wdHk9dGl0bGVdIHsNCiAgICBib3JkZXI6IDFweCBkb3R0ZWQgI2JiYjsNCiAgICBjb2xvcjogIzg4ODsNCiAgICBwYWRkaW5nOiA1cHg7DQogIH0NCiAgLm5ldy1jYXJkIHsNCiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTsNCiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7DQogICAgZm9udC1zaXplOiAxOHB4Ow0KICAgIGJveC1zaGFkb3c6IDAgNHB4IDVweCAwIHJnYmEoMCwwLDAsLjE0KSwgMCAxcHggMTBweCAwIHJnYmEoMCwwLDAsLjEyKSwgMCAycHggNHB4IC0xcHggcmdiYSgwLDAsMCwuMik7DQogICAgY29sb3I6ICM4ODg7DQogICAgcGFkZGluZzogMTVweDsNCiAgICBib3JkZXItcmFkaXVzOiAycHg7DQogICAgbWFyZ2luLWJvdHRvbTogNDBweDsNCiAgfQ0KICANCjwvc3R5bGU+DQoNCg0KPGRpdiBhbnZpbC1kcm9wLWRlZmF1bHQgYW52aWwtZHJvcC1jb250YWluZXI9Ij5tYWluPmRpdi5jYXJkcyAuYW52aWwtY29udGFpbmVyIiBhbnZpbC1kcm9wLXJlZGlyZWN0PSIubmV3LWNhcmQiPg0KICA8aGVhZGVyIGFudmlsLWRyb3AtcmVkaXJlY3Q9Ij4ubmF2LWxpbmtzIFthbnZpbC1kcm9wLXNsb3RdLD4ubmF2LWxpbmtzPnNwYW4+ZGl2LmxpbmstZHJvcC16b25lLD4udGl0bGU+W2FudmlsLWRyb3AtaGVyZV0iPg0KICAgIDxkaXYgY2xhc3M9InRpdGxlIiBhbnZpbC1zbG90PSJ0aXRsZSI+DQogICAgICA8ZGl2IGNsYXNzPSJhbnZpbC1kZXNpZ25lci1vbmx5IiBhbnZpbC1pZi1zbG90LWVtcHR5PSJ0aXRsZSIgYW52aWwtZHJvcC1oZXJlPkRyb3AgdGl0bGUgaGVyZTwvZGl2Pg0KICAgIDwvZGl2Pg0KICAgIA0KICAgIDxkaXYgY2xhc3M9Im5hdi1saW5rcyIgYW52aWwtZHJvcC1yZWRpcmVjdD0iPnNwYW4+LmxpbmstZHJvcC16b25lLD4uYW52aWwtZGVzaWduZXItb25seSI+DQogICAgICA8c3BhbiBhbnZpbC1zbG90LXJlcGVhdD0ibmF2LWxpbmtzIj4NCiAgICAgICAgPGRpdiBjbGFzcz0ibGluay1kcm9wLXpvbmUiIGFudmlsLWRyb3AtaGVyZT48L2Rpdj4NCiAgICAgIDwvc3Bhbj4NCiAgICAgIDxzcGFuIGNsYXNzPSJhbnZpbC1kZXNpZ25lci1vbmx5IG5ldy1saW5rIiBhbnZpbC1kcm9wLXNsb3Q9Im5hdi1saW5rcyI+PGkgY2xhc3M9ImdseXBoaWNvbiBnbHlwaGljb24tcGx1cyI+PC9pPjwvc3Bhbj4NCiAgICA8L2Rpdj4NCiAgPC9oZWFkZXI+DQogIDxkaXYgY2xhc3M9InJpYmJvbiI+PC9kaXY+DQogIDxtYWluPg0KICAgIDxkaXYgY2xhc3M9ImNhcmRzIj4NCiAgICAgIDxkaXYgY2xhc3M9ImNhcmQiIGFudmlsLXNsb3QtcmVwZWF0PSJkZWZhdWx0Ij48L2Rpdj4NCiAgICAgIDxkaXYgY2xhc3M9ImFudmlsLWRlc2lnbmVyLW9ubHkgbmV3LWNhcmQiIGFudmlsLWRyb3Atc2xvdD0iZGVmYXVsdCI+DQogICAgICAgIDxpIGNsYXNzPSJmYSBmYS1pbmZvLWNpcmNsZSI+PC9pPiBBZGQNCiAgICAgICAgPGltZyBzcmM9Imh0dHBzOi8vYW52aWwud29ya3MvdGVtcGxhdGUtYXNzZXRzL2NvbHVtbi1wYW5lbC1pY29uLnBuZyIgc3R5bGU9ImhlaWdodDogMzBweDsgbWFyZ2luLXJpZ2h0OiAtN3B4OyBtYXJnaW4tdG9wOiAtNXB4Ij4gQ29sdW1uUGFuZWwgY29tcG9uZW50cyB0byBjcmVhdGUgbmV3IGNhcmRzLg0KICAgICAgPC9kaXY+DQogICA8L2Rpdj4NCiAgICA8Zm9vdGVyIGFudmlsLWRyb3AtcmVkaXJlY3Q9Ij4uZm9vdGVyLWxpbmtzIFthbnZpbC1kcm9wLXNsb3RdLD4uZm9vdGVyLWxpbmtzPnNwYW4+LmxpbmstZHJvcC16b25lIj4NCiAgICAgIDxkaXYgY2xhc3M9ImZvb3Rlci1saW5rcyIgYW52aWwtZHJvcC1yZWRpcmVjdD0iPnNwYW4+LmxpbmstZHJvcC16b25lLD4uYW52aWwtZGVzaWduZXItb25seSI+DQogICAgICAgIDxzcGFuIGFudmlsLXNsb3QtcmVwZWF0PSJmb290ZXItbGlua3MtbGVmdCI+DQogICAgICAgICAgPGRpdiBjbGFzcz0ibGluay1kcm9wLXpvbmUiIGFudmlsLWRyb3AtaGVyZT48L2Rpdj4NCiAgICAgICAgPC9zcGFuPg0KICAgICAgICA8c3BhbiBjbGFzcz0iYW52aWwtZGVzaWduZXItb25seSBuZXctbGluayIgYW52aWwtZHJvcC1zbG90PSJmb290ZXItbGlua3MtbGVmdCI+PGkgY2xhc3M9ImdseXBoaWNvbiBnbHlwaGljb24tcGx1cyI+PC9pPjwvc3Bhbj4NCiAgICAgIDwvZGl2Pg0KICAgICAgPGRpdiBjbGFzcz0iZm9vdGVyLWxpbmtzIiBhbnZpbC1kcm9wLXJlZGlyZWN0PSI+c3Bhbj4ubGluay1kcm9wLXpvbmUsPi5hbnZpbC1kZXNpZ25lci1vbmx5Ij4NCiAgICAgICAgPHNwYW4gYW52aWwtc2xvdC1yZXBlYXQ9ImZvb3Rlci1saW5rcy1yaWdodCI+DQogICAgICAgICAgPGRpdiBjbGFzcz0ibGluay1kcm9wLXpvbmUiIGFudmlsLWRyb3AtaGVyZT48L2Rpdj4NCiAgICAgICAgPC9zcGFuPg0KICAgICAgICA8c3BhbiBjbGFzcz0iYW52aWwtZGVzaWduZXItb25seSBuZXctbGluayIgYW52aWwtZHJvcC1zbG90PSJmb290ZXItbGlua3MtcmlnaHQiPjxpIGNsYXNzPSJnbHlwaGljb24gZ2x5cGhpY29uLXBsdXMiPjwvaT48L3NwYW4+DQogICAgICA8L2Rpdj4NCiAgICA8L2Zvb3Rlcj4NCiAgPC9tYWluPg0KPC9kaXY+DQo=}
+  - {name: dashboard.html, content: PCEtLTxsaW5rIGhyZWY9Il8vdGhlbWUvZGFzaGJvYXJkLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ij4tLT4NCjxzdHlsZT4NCi5zaWRlYmFyIHsNCiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzMzOw0KICAgIGNvbG9yOiB3aGl0ZTsNCiAgICBwYWRkaW5nOiAxMHB4IDA7DQogICAgZmxleC1zaHJpbms6IDA7DQoNCiAgICBvdmVyZmxvdy15OiBhdXRvOw0KICAgIG92ZXJmbG93LXg6IGhpZGRlbjsNCn0NCg0KLnNpZGViYXIgLnBsYWNlaG9sZGVyIHsNCiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7DQp9DQoNCi5zaWRlYmFyLWVsdDo6Zmlyc3Qgew0KICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjODg4Ow0KfQ0KDQouc2lkZWJhci1lbHQgew0KICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsNCiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgIzg4ODsNCn0NCg0KLnNpZGViYXItZWx0IC5kcm9wLWhlcmUgew0KICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsNCiAgICB0b3A6IC04cHg7DQogICAgbGVmdDogMDsNCiAgICByaWdodDogMDsNCiAgICBoZWlnaHQ6IDVweDsNCn0NCg0KLnNpZGViYXItZWx0Pi5jb250ZW50IGEgew0KZm9udC1zaXplOiAxNnB4Ow0KY29sb3I6d2hpdGU7DQp0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOw0KfQ0KDQouc2lkZWJhci1lbHQ+LmNvbnRlbnQgYTpob3ZlciB7DQpiYWNrZ3JvdW5kOiAjNDQ0Ow0KfQ0KDQouc2lkZWJhci1lbHQgLmNvbnRlbnQgYS5hbnZpbC1jb21wb25lbnQgew0KICAgIHBhZGRpbmctbGVmdDogMTRweDsNCiAgICBwYWRkaW5nLXJpZ2h0OiAxNHB4Ow0KfQ0KDQouc2lkZWJhci1lbHQgYSB7DQogICAgY29sb3I6ICNkZGQ7DQp9DQoNCi5zaWRlYmFyLWVsdCBhOmhvdmVyLCAuc2lkZWJhci1lbHQgYTphY3RpdmUgew0KICAgIGNvbG9yOiB3aGl0ZTsNCn0NCg0KLyogUmVzcG9uc2l2ZSBiaXRzOiBNYWtlIHRoZSBtZW51IG92ZXJsYXkgdGhlIHNjcmVlbg0KICAgKGFuZCBoaWRkZW4gYnkgZGVmYXVsdCkgcmF0aGVyIHRoYW4gZGlzcGxhY2luZyBpdA0KICAgb24gc21hbGwgc2NyZWVucw0KKi8NCg0KQG1lZGlhKG1heC13aWR0aDo3NjdweCkgew0KICAgIC5ydW5uZXIgLnNpZGViYXIgew0KICAgICAgICBkaXNwbGF5OiBub25lOw0KICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7DQogICAgICAgIHRvcDogNjJweDsNCiAgICAgICAgYm90dG9tOiAwcHg7DQogICAgICAgIGxlZnQ6IDBweDsNCiAgICAgICAgei1pbmRleDogMjsNCiAgICB9DQoNCiAgICAucnVubmVyIC5zaWRlYmFyLWNsaWNrLWd1YXJkIHsNCiAgICAgICAgZGlzcGxheTogbm9uZTsNCiAgICAgICAgcG9zaXRpb246IGFic29sdXRlOw0KICAgICAgICB0b3A6IDYycHg7DQogICAgICAgIGJvdHRvbTogMHB4Ow0KICAgICAgICBsZWZ0OiAwOw0KICAgICAgICByaWdodDogMDsNCiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzg4ODsNCiAgICAgICAgb3BhY2l0eTogMC41Ow0KICAgICAgICB6LWluZGV4OiAxOw0KICAgIH0NCg0KICAgIC5kZXNpZ25lciAuc2lkZWJhciB7DQogICAgICAgIG1heC13aWR0aDogMzAlOw0KICAgIH0NCg0KICAgIC5zaWRlYmFyLmZsb2F0aW5nIHsNCiAgICAgICAgdG9wOiA2MnB4Ow0KICAgIH0NCg0KfQ0KDQouc2lkZWJhci5mbG9hdGluZyB7DQogICAgcG9zaXRpb246IGFic29sdXRlOw0KICAgIHRvcDogNjJweDsNCiAgICBib3R0b206IDBweDsNCiAgICBsZWZ0OiAwcHg7DQogICAgei1pbmRleDogMjsNCn0NCg0KLmJvZHkgew0KICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsNCiAgICBwYWRkaW5nLXRvcDogNjJweDsNCiAgICB3aWR0aDogMTAwJTsNCiAgICBkaXNwbGF5OiBmbGV4Ow0KICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7DQogICAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7DQogICAgbWluLWhlaWdodDogMTAwdmg7DQp9DQoNCg0KLm5hdiB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7DQogICAgcGFkZGluZzogMTFweCAxNnB4IDExcHg7IC8qIGV4cGVjdCA1cHggbWFyZ2luICovDQogICAgaGVpZ2h0OiA2MnB4Ow0KICAgIGZvbnQtc2l6ZTogMTZweDsNCiAgICBjb2xvcjogIzAwOTY4ODsgLyogTWF0ZXJpYWwgRGVzaWduOiAiVGVhbCA1MDAiICovDQp9DQoNCi5uYXYgLnRpdGxlLCAubmF2IC5tZW51LWJ0biB7DQogICAgZGlzcGxheTogaW5saW5lLWJsb2NrOw0KICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7DQogICAgbWFyZ2luLWxlZnQ6IDdweDsNCn0NCi5uYXYgLm1lbnUtYnRuLCAubmF2IC50aXRsZS5wbGFjZWhvbGRlciB7DQogICAgbWFyZ2luLXRvcDogNXB4Ow0KICAgIG1hcmdpbi1sZWZ0OiAwOw0KfQ0KDQoubmF2ID4gLm1lbnUtYnRuIHsNCiAgICBjb2xvcjogIzMzMzsNCiAgICBjdXJzb3I6IHBvaW50ZXI7DQogICAgd2lkdGg6IDMycHg7DQogICAgaGVpZ2h0OiAzMnB4Ow0KICAgIGJvcmRlci1yYWRpdXM6IDE2cHg7DQogICAgcGFkZGluZzogNXB4Ow0KICAgIG1hcmdpbi10b3A6IDdweDsNCiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7DQp9DQoNCi5uYXYgPiAubWVudS1idG46aG92ZXIgew0KICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2M7DQp9DQoNCi5uYXYtcmlnaHQgew0KICAgIGZsb2F0OiByaWdodDsNCiAgICBjb2xvcjogIzMzMzsNCn0NCg0KLm5hdi1lbHQgew0KICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsNCiAgICB2ZXJ0aWNhbC1hbGlnbjogdG9wOw0KICAgIG1hcmdpbi1sZWZ0OiAxMHB4Ow0KICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsNCn0NCg0KLm5hdi1lbHQucGxhY2Vob2xkZXIgew0KICAgIG1hcmdpbi10b3A6IDVweDsNCiAgICBvcGFjaXR5OiAwLjg7DQogICAgY29sb3I6ICM4ODg7DQogICAgdmlzaWJpbGl0eTogaGlkZGVuOw0KfQ0KDQpib2R5LmFudmlsLWhpZ2hsaWdodCAubmF2LWVsdC5wbGFjZWhvbGRlciB7DQogICAgdmlzaWJpbGl0eTogdmlzaWJsZTsNCn0NCg0KLm5hdi1lbHQgLmRyb3AtaGVyZSB7DQogICAgcG9zaXRpb246IGFic29sdXRlOw0KICAgIHRvcDogMDsNCiAgICBsZWZ0OiAtNy41cHg7DQogICAgYm90dG9tOiAwOw0KICAgIHdpZHRoOiA1cHg7DQp9DQoNCi5ib2R5IHsNCiAgICBwb3NpdGlvbjogcmVsYXRpdmU7DQogICAgcGFkZGluZy10b3A6IDYycHg7DQogICAgd2lkdGg6IDEwMCU7DQogICAgZGlzcGxheTogZmxleDsNCiAgICBmbGV4LWRpcmVjdGlvbjogcm93Ow0KICAgIGFsaWduLWl0ZW1zOiBzdHJldGNoOw0KICAgIG1pbi1oZWlnaHQ6IDEwMHZoOw0KfQ0KDQouY2FyZHMgew0KICAgIGZsZXgtZ3JvdzogMTsNCg0KICAgIGZvbnQtd2VpZ2h0OiBib2xkOw0KICAgIGZvbnQtY29sb3I6ICM1NTU7DQogICAgZm9udC1zaXplOiAyNHB4Ow0KDQogICAgcGFkZGluZzogMjRweCAxNnB4Ow0KICAgIG1heC13aWR0aDogMTAwJTsNCn0NCg0KLmNhcmRzID4gLmFudmlsLWNvbnRhaW5lciB7DQogICAgb3V0bGluZTogbm9uZSAhaW1wb3J0YW50Ow0KfQ0KDQouY2FyZHMgLmFudmlsLWNvbnRhaW5lciAuYW52aWwtY29udGFpbmVyLA0KLmRlc2lnbmVyIC5hbnZpbC1oaWdobGlnaHQgLmNhcmRzIC5hbnZpbC1jb250YWluZXIgLmFudmlsLWNvbnRhaW5lciB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7DQogICAgYm94LXNoYWRvdzogMXB4IDJweCA0cHggIzg4ODsNCg0KICAgIC8qIEZvbnQgYmFjayB0byBkZWZhdWx0cyAqLw0KICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7DQogICAgLypjb2xvcjogIzMzMzsqLw0KICAgIGZvbnQtc2l6ZTogMTRweDsNCg0KICAgIG91dGxpbmU6IG5vbmU7DQoNCiAgICBwYWRkaW5nOiA3cHggMDsNCn0NCg0KLmRlc2lnbmVyIC5hbnZpbC1oaWdobGlnaHQgLmNhcmRzIC5hbnZpbC1jb250YWluZXIgLmFudmlsLWNvbnRhaW5lciAuYW52aWwtY29udGFpbmVyLA0KLmNhcmRzIC5hbnZpbC1jb250YWluZXIgLmFudmlsLWNvbnRhaW5lciAuYW52aWwtY29udGFpbmVyIHsNCiAgICBib3gtc2hhZG93OiBub25lOw0KICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50Ow0KICAgIHBhZGRpbmc6IDA7DQp9DQoNCi5kZXNpZ25lciAuYW52aWwtaGlnaGxpZ2h0IC5jYXJkcyAuYW52aWwtY29udGFpbmVyIC5hbnZpbC1jb250YWluZXIgLmFudmlsLWNvbnRhaW5lciB7DQogICAgb3V0bGluZTogMXB4IGRhc2hlZCByZ2JhKDAsMCwwLDAuMykNCn0NCg0KLmJvZHkgLmluc3RydWN0aW9ucyB7DQogICAgcGFkZGluZzogMjRweCAxNnB4Ow0KICAgIGZvbnQtc2l6ZTogMTRweDsNCiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7DQogICAgY29sb3I6ICM2NjY7DQp9DQoNCjwvc3R5bGU+DQogICAgICANCjxzY3JpcHQ+DQpmdW5jdGlvbiB0b2dnbGVTaWRlYmFyKCkgew0KICAgIHZhciBzID0gJCgnLnNpZGViYXInKTsNCiAgICBpZiAoIXMuaXMoJzpoaWRkZW4nKSkgew0KICAgICAgICAkKCcuc2lkZWJhci1jbGljay1ndWFyZCcpLmhpZGUoKTsNCiAgICAgICAgcy5hZGRDbGFzcygnZmxvYXRpbmcnKS5hbmltYXRlKHtsZWZ0OiAtcy53aWR0aCgpfSwge2NvbXBsZXRlOiBmdW5jdGlvbigpIHsgcy5oaWRlKCk7IH19KTsNCiAgICB9IGVsc2Ugew0KICAgICAgICAkKCcuc2lkZWJhci1jbGljay1ndWFyZCcpLnNob3coKTsNCiAgICAgICAgcy5zaG93KCkuYWRkQ2xhc3MoJ2Zsb2F0aW5nJykuY3NzKCdsZWZ0JywgJy0xMDAlJykuY3NzKCdsZWZ0JywgLXMud2lkdGgoKSkNCiAgICAgICAgICAgIC5hbmltYXRlKHtsZWZ0OiAwfSwge2NvbXBsZXRlOiBmdW5jdGlvbigpIHsgcy5yZW1vdmVDbGFzcygnZmxvYXRpbmcnKTsgfX0pOw0KICAgIH0NCn0NCg0KJChmdW5jdGlvbigpIHsNCiAgICAkKCcuc2lkZWJhcicpLm9uKCJjbGljayIsIGZ1bmN0aW9uKCkgew0KICAgICAgICBpZiAod2luZG93LmlubmVyV2lkdGggPD0gNzY3KSB7DQogICAgICAgICAgICB0b2dnbGVTaWRlYmFyKCk7DQogICAgICAgIH0NCiAgICB9KTsNCiAgICAkKCcuc2lkZWJhci1jbGljay1ndWFyZCcpLm9uKCJjbGljayIsIHRvZ2dsZVNpZGViYXIpOw0KfSkNCjwvc2NyaXB0Pg0KDQo8IS0tIFB1dCBib2R5IGJlZm9yZSBuYXYgc28gdGhhdCBpdCBzaXRzIHVuZGVybmVhdGggLS0+DQoNCjxkaXYgY2xhc3M9ImJvZHkiIGFudmlsLWRyb3AtZGVmYXVsdCBhbnZpbC1kcm9wLWNvbnRhaW5lcj0iPi5jYXJkcyAuYW52aWwtY29udGFpbmVyIiBhbnZpbC1kcm9wLXJlZGlyZWN0PSI+LmNhcmRzID4gLnBsYWNlaG9sZGVyIj4NCiAgICA8ZGl2IGNsYXNzPSJzaWRlYmFyIiBhbnZpbC1kcm9wLXJlZGlyZWN0PSI+LmRyb3AtaGVyZSI+DQogICAgICAgIDxkaXYgYW52aWwtc2xvdC1yZXBlYXQ9InNpZGViYXIiIGNsYXNzPSJzaWRlYmFyLWVsdCI+DQogICAgICAgICAgICA8ZGl2IGFudmlsLWRyb3AtaGVyZSBjbGFzcz0iZHJvcC1oZXJlIj48L2Rpdj4NCiAgICAgICAgICAgIDxkaXYgYW52aWwtc2xvdCBjbGFzcz0iY29udGVudCI+PC9kaXY+DQogICAgICAgIDwvZGl2Pg0KICAgICAgICA8ZGl2IGNsYXNzPSJzaWRlYmFyLWVsdCBhbnZpbC1kZXNpZ25lci1vbmx5IGRyb3AtaGVyZSIgYW52aWwtZHJvcC1zbG90PSJzaWRlYmFyIj4NCiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNvbnRlbnQgcGxhY2Vob2xkZXIiPjxpIGNsYXNzPSJnbHlwaGljb24gZ2x5cGhpY29uLXBsdXMiPjwvaT48L2Rpdj4NCiAgICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQogICAgPGRpdiBjbGFzcz0ic2lkZWJhci1jbGljay1ndWFyZCI+PC9kaXY+DQoNCiAgICA8ZGl2IGNsYXNzPSJjYXJkcyBhbnZpbC1tZWFzdXJlLWNvbnRlbnQiPg0KICAgICAgICA8ZGl2IGFudmlsLWlmLXNsb3QtZW1wdHk9ImRlZmF1bHQiDQogICAgICAgICAgICAgYW52aWwtZHJvcC1zbG90PSJkZWZhdWx0Ig0KICAgICAgICAgICAgIGNsYXNzPSJwbGFjZWhvbGRlciI+DQogICAgICAgICAgICAgRHJvcCBhIENvbHVtblBhbmVsIGhlcmUgdG8gYWRkIGNvbnRlbnQNCiAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgPGRpdiBhbnZpbC1zbG90PSJkZWZhdWx0Ij48L2Rpdj4NCg0KICAgICAgICA8ZGl2IGNsYXNzPSJhbnZpbC1kZXNpZ25lci1vbmx5IGluc3RydWN0aW9ucyI+DQogICAgICAgICAgICA8aSBjbGFzcz0iZmEgZmEtaW5mby1jaXJjbGUiPjwvaT4gQWRkDQogICAgICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly9hbnZpbC53b3Jrcy90ZW1wbGF0ZS1hc3NldHMvY29sdW1uLXBhbmVsLWljb24ucG5nIiBzdHlsZT0iaGVpZ2h0OiAzMHB4OyBtYXJnaW4tcmlnaHQ6IC03cHg7IG1hcmdpbi10b3A6IC01cHgiPiBDb2x1bW5QYW5lbCBjb21wb25lbnRzIHRvIGNyZWF0ZSBuZXcgY2FyZHMuDQogICAgICAgIDwvZGl2Pg0KICAgIDwvZGl2Pg0KPC9kaXY+DQoNCjxkaXYgY2xhc3M9Im5hdiIgYW52aWwtZHJvcC1yZWRpcmVjdD0iLnRpdGxlLnBsYWNlaG9sZGVyLCAubmF2LWVsdC5wbGFjZWhvbGRlciwgLm5hdi1lbHQgLmRyb3AtaGVyZSI+DQoNCiAgICA8ZGl2IGNsYXNzPSJuYXYtcmlnaHQiIGFudmlsLWRyb3AtcmVkaXJlY3Q9Ii5uYXYtZWx0Ij4NCiAgICAgICAgPGRpdiBhbnZpbC1zbG90LXJlcGVhdD0ibmF2LXJpZ2h0IiBjbGFzcz0ibmF2LWVsdCI+DQogICAgICAgICAgICA8ZGl2IGFudmlsLWRyb3AtaGVyZSBjbGFzcz0iZHJvcC1oZXJlIj48L2Rpdj4NCiAgICAgICAgPC9kaXY+DQogICAgICAgIDxkaXYgY2xhc3M9Im5hdi1lbHQgcGxhY2Vob2xkZXIgYW52aWwtZGVzaWduZXItb25seSIgYW52aWwtZHJvcC1zbG90PSJuYXYtcmlnaHQiPg0KICAgICAgICAgICAgPGkgY2xhc3M9ImdseXBoaWNvbiBnbHlwaGljb24tcGx1cyI+PC9pPg0KICAgICAgICA8L2Rpdj4NCiAgICA8L2Rpdj4NCg0KICAgIDxkaXYgY2xhc3M9Im1lbnUtYnRuIiBvbmNsaWNrPSJ0b2dnbGVTaWRlYmFyKCk7Ij4NCiAgICAgICAgPGkgY2xhc3M9ImZhIGZhLWJhcnMiPjwvaT4NCiAgICA8L2Rpdj4NCg0KICAgIDxkaXYgYW52aWwtaWYtc2xvdC1lbXB0eT0idGl0bGUiIGFudmlsLWRyb3Atc2xvdD0idGl0bGUiIGNsYXNzPSJ0aXRsZSBwbGFjZWhvbGRlciBhbnZpbC1kZXNpZ25lci1vbmx5Ij4NCiAgICAgICAgRHJvcCBhIHRpdGxlIGhlcmUNCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGFudmlsLXNsb3Q9InRpdGxlIiBjbGFzcz0idGl0bGUiPjwvZGl2Pg0KPC9kaXY+DQo=}
+server_modules:
+- {name: ServerModule1, code: "import anvil.stripe\nimport anvil.users\nimport tables\n\
+    from tables import app_tables\nimport anvil.server\nimport anvil.http\n\ndef ensure_user():\n\
+    \  me = anvil.users.get_user()\n  if me is None:\n    raise Exception(\"Not logged\
+    \ in\")\n  if not anvil.server.session['paying_subscriber']:\n    raise Exception(\"\
+    Not a paying user\")\n  return me\n\n@anvil.server.callable\ndef is_paying_subscriber():\n\
+    \  anvil.server.session['paying_subscriber'] = False\n  me = anvil.users.get_user()\n\
+    \  if me is not None and me['stripe_customer'] is not None:\n    customer = anvil.stripe.get_customer(me['stripe_customer'])\n\
+    \    if 'demo-1' in customer.get_subscription_ids(True):\n      anvil.server.session['paying_subscriber']\
+    \ = True\n  \n@anvil.server.callable\ndef setup_new_subscription(token, user_details):\n\
+    \  me = anvil.users.ensure_user()\n  if me is not None:\n    raise Exception(\"\
+    Not logged in\")\n  customer = anvil.stripe.new_customer(user_details['email'],\
+    \ token)\n  customer.new_subscription('demo-1')\n  me['stripe_customer'] = customer['id']\n\
+    \   \n@anvil.server.callable\ndef get_stock_price(symbol):\n  return anvil.http.request(\"\
+    https://api.iextrading.com/1.0/stock/%s/chart/1y\" % symbol, json=True)\n\n@anvil.server.callable\n\
+    def get_my_stocks():\n  me = ensure_user()\n  return app_tables.stocks.client_writable(user=me).search()\n\
+    \n@anvil.server.callable\ndef add_stock(symbol):\n  me = ensure_user()\n  symbol\
+    \ = anvil.http.url_encode(symbol)\n  try:\n    company_name = anvil.http.request(\"\
+    https://api.iextrading.com/1.0/stock/%s/company\" % symbol, json=True)['companyName']\n\
+    \  except anvil.http.HttpError:\n    return None\n  \n  if app_tables.stocks.get(user=me,\
+    \ symbol=symbol):\n    return None\n  \n  return app_tables.stocks.add_row(symbol=symbol,\
+    \ user=me, company_name=company_name, notes=\"\")\n\n@anvil.server.callable\n\
+    def remove_stock(stock_row):\n  me = ensure_user()\n  if stock_row['user'] ==\
+    \ me:\n    stock_row.delete()"}
+renamed: true
