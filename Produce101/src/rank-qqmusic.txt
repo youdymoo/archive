@@ -1,0 +1,1738 @@
+<body class="c_bg1" data-gr-c-s-loaded="true">
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol id="icon_people" viewBox="0 0 32 32">
+            <title>人数</title>
+            <path d="M19.931,3.318c-0.966-0.783-1.326-0.788-2.288-1.552C17.037,1.271,16.523,0.673,16.125,0
+    c-0.786,1.057-1.854,1.872-3.081,2.352C11.386,3.053,10.1,4.418,9.499,6.114C9.098,7.077,8.887,8.109,8.878,9.153
+    c0,0.743,0.044,1.089,0.049,1.739c-0.768,0.065-1.339,0.74-1.274,1.509c0.001,0.008,0.001,0.015,0.002,0.023
+    c0.004,0.286,0.057,0.57,0.157,0.838c0.339,0.862,0.882,1.629,1.583,2.235c0.176,0.731,0.432,1.441,0.765,2.115
+    c0.147,0.382,0.341,0.745,0.578,1.079c0.207,0.308,0.443,0.594,0.707,0.855l0.671,0.557c0.187,0.209,0.3,0.475,0.32,0.755
+    l0.024,1.703c0,0.815-1.25,1.268-1.488,1.418c-1.668,0.674-4.381,1.807-6.282,2.795c-0.581,0.254-1.129,0.578-1.631,0.966
+    c-0.154,0.107-0.295,0.233-0.419,0.373c-0.398,0.378-0.635,0.895-0.662,1.443c0.067,0.789,0.508,1.498,1.186,1.908
+    c0.771,0.394,1.632,0.576,2.497,0.528C7.078,32.008,25.359,32,26.734,32c0.793,0.032,1.563-0.309,2.268-0.673
+    c0.627-0.357,1.016-1.022,1.021-1.743c-0.028-0.547-0.267-1.061-0.667-1.435c-0.126-0.14-0.267-0.264-0.422-0.371
+    c-0.506-0.386-1.058-0.708-1.643-0.96c-1.916-0.982-4.648-2.108-6.328-2.778c-0.24-0.149-1.499-0.6-1.499-1.41l0.025-1.693
+    c0.02-0.319,0.161-0.618,0.396-0.835l0.671-0.557c0.532-0.52,0.949-1.145,1.225-1.835c0.347-0.696,0.613-1.43,0.793-2.187
+    c0,0,1.73-1.452,1.73-2.97c0.073-0.766-0.489-1.447-1.255-1.52c-0.009-0.001-0.017-0.002-0.026-0.002
+    c0.005-0.646,0.049-0.991,0.049-1.729c0.059-1.313-0.304-2.61-1.034-3.703C21.482,4.716,20.768,3.942,19.931,3.318z"></path>
+        </symbol>
+        <symbol id="icon_refresh" viewBox="0 0 32 32">
+            <title>刷新</title>
+            <path d="M30.797,9.914c-0.02-0.05-0.041-0.099-0.062-0.149c-0.033-0.078-0.069-0.155-0.103-0.232l0-0.007L30.63,9.529l-0.007-0.015
+    L28.77,11.88l0.003,0.01l-5.785,7.357h6.035c-1.772,7.258-9.092,11.706-16.35,9.934S0.968,20.09,2.739,12.832
+    s9.092-11.706,16.35-9.934c2.162,0.528,4.16,1.581,5.818,3.066l1.828-1.827c-6.552-5.929-16.67-5.423-22.599,1.13
+    s-5.423,16.67,1.13,22.599s16.67,5.423,22.599-1.13C32.002,22.162,33.143,15.618,30.797,9.914L30.797,9.914z"></path>
+        </symbol>
+        <symbol id="icon_download" viewBox="0 0 32 32">
+            <title>下载</title>
+            <path d="M15 18.978l-9.057-9.057-1.443 1.443 11.545 11.545 11.545-11.545-1.443-1.443-9.146 9.146v-15.567h-2v15.478zM26.5 24.5h2c0 2.241-1.726 4-3.893 4h-17.213c-2.165 0-3.893-1.761-3.893-4h2c0 1.14 0.886 2 1.893 2h17.213c1.010 0 1.893-0.858 1.893-2z"></path>
+        </symbol>
+        <symbol id="icon_like" viewBox="0 0 32 32">
+            <title>喜欢</title>
+            <path d="M16 28c0 0 2.11-1.591 2.259-1.704 2.168-1.707 3.155-2.51 4.483-3.692 2.147-1.911 3.825-3.7 4.974-5.417 0.822-1.229 1.357-2.402 1.565-3.528 0.941-5.091-1.221-8.588-5.151-9.44-2.959-0.641-6.218 0.432-8.131 2.659-1.975-2.525-5.247-3.477-8.295-2.5-3.688 1.182-5.83 4.758-5.040 9.323 0.245 1.418 1.093 2.956 2.449 4.636 1.061 1.314 2.415 2.69 4.029 4.142 1.441 1.296 2.502 2.165 4.774 3.968l2.085 1.554zM10.486 21.014c-1.541-1.384-2.825-2.687-3.811-3.906-1.164-1.44-1.863-2.706-2.040-3.729-0.624-3.599 0.95-6.222 3.685-7.098 2.629-0.842 5.444 0.239 6.747 2.866l0.66 1.331c0.123 0.248 0.327 0.246 0.452 0.003l0.678-1.323c1.177-2.295 4.186-3.559 6.84-2.985 2.842 0.615 4.363 3.073 3.61 7.141-0.154 0.83-0.581 1.766-1.265 2.788-1.038 1.55-2.611 3.224-4.642 5.030-1.289 1.145-2.254 1.929-4.377 3.599-0.119 0.090-0.852 0.651-1.024 0.769-0.025-0.020-0.783-0.597-0.931-0.68-2.173-1.723-3.202-2.567-4.582-3.806z"></path>
+        </symbol>
+        <symbol id="icon_liked" viewBox="0 0 32 32">
+            <title>已喜欢</title>
+            <path d="M16 28c0 0 2.11-1.591 2.259-1.704 2.168-1.707 3.155-2.51 4.483-3.692 2.147-1.911 3.825-3.7 4.974-5.417 0.822-1.229 1.357-2.402 1.565-3.528 0.941-5.091-1.221-8.588-5.151-9.44-2.959-0.641-6.218 0.432-8.131 2.659-1.975-2.525-5.247-3.477-8.295-2.5-3.688 1.182-5.83 4.758-5.040 9.323 0.245 1.418 1.093 2.956 2.449 4.636 1.061 1.314 2.415 2.69 4.029 4.142 1.441 1.296 2.502 2.165 4.774 3.968l2.085 1.554z"></path>
+        </symbol>
+        <symbol id="icon_play" viewBox="0 0 32 32">
+            <title>播放</title>
+            <path d="M16 28c6.625 0 12-5.37 12-12s-5.375-12-12-12c-6.625 0-12 5.37-12 12s5.375 12 12 12zM16 30c-7.732 0-14-6.268-14-14s6.268-14 14-14c7.732 0 14 6.268 14 14s-6.268 14-14 14zM12.5 20.186c0 0.189 0.054 0.374 0.155 0.534 0.295 0.467 0.913 0.606 1.379 0.311v0l6.627-4.186c0.126-0.079 0.232-0.186 0.311-0.311 0.295-0.467 0.155-1.085-0.311-1.379v0l-6.627-4.186c-0.16-0.101-0.345-0.155-0.534-0.155-0.552 0-1 0.448-1 1v8.371z"></path>
+        </symbol>
+        <symbol id="icon_pause" viewBox="0 0 32 32">
+            <title>暂停</title>
+            <path d="M16 28c6.625 0 12-5.37 12-12s-5.375-12-12-12c-6.625 0-12 5.37-12 12s5.375 12 12 12zM16 30c-7.732 0-14-6.268-14-14s6.268-14 14-14c7.732 0 14 6.268 14 14s-6.268 14-14 14zM11 11.995v8.009c0 0.546 0.449 0.995 1.003 0.995h1.494c0.56 0 1.003-0.446 1.003-0.995v-8.009c0-0.546-0.449-0.995-1.003-0.995h-1.494c-0.56 0-1.003 0.446-1.003 0.995zM17.5 11.995v8.009c0 0.546 0.449 0.995 1.003 0.995h1.494c0.56 0 1.003-0.446 1.003-0.995v-8.009c0-0.546-0.449-0.995-1.003-0.995h-1.494c-0.56 0-1.003 0.446-1.003 0.995z"></path>
+        </symbol>
+        <symbol id="icon_video" viewBox="0 0 32 32">
+            <title>视频</title>
+            <path d="M24 11.032l4.317-2.761c0.929-0.594 1.683-0.178 1.683 0.92v13.633c0 1.102-0.745 1.5-1.662 0.889l-4.338-2.889v2.176c0 1.657-1.343 3-3.001 3h-15.997c-1.658 0-3.001-1.343-3.001-3v-14.001c0-1.657 1.343-3 3.001-3h15.997c1.658 0 3.001 1.343 3.001 3v2.033zM22 16.565v-7.565c0-0.552-0.448-1-1.001-1h-15.997c-0.554 0-1.001 0.447-1.001 1v14.001c0 0.552 0.448 1 1.001 1h15.997c0.554 0 1.001-0.448 1.001-1v-3.508l-0.001-0.001 0.001-2.927zM28 21.085v-10.237l-5.999 3.837-0 2.405 5.999 3.996z"></path>
+        </symbol>
+        <symbol id="icon_video_play" viewBox="0 0 32 32">
+            <title>视频播放</title>
+            <path d="M7.8,2.1c0,0,20.3,12.2,20.5,12.4c1.9,1.5,2.1,3.3,0.1,4.9C28.1,19.5,7.7,30,7.6,30.1
+        c-1.2,0.7-2.5,1.2-3.8,0.7c-0.9-0.3-1.6-1.2-1.6-2.1V3.3c0-0.9,0.5-1.7,1.3-2C4.9,0.7,6.3,1.2,7.8,2.1z"></path>
+        </symbol>
+    </defs>
+</svg>
+<section class="wrap js_wrap"><section class="mod_hit ">
+    <div class="mod_tit">
+        <div class="tit__bd">
+            <h2 class="tit__txt c_txt3"></h2>
+            
+            <img src="https://y.gtimg.cn/music/common/upload/t_tv_songShow/273171.png?max_age=2592000" class="tit__bg" alt="">
+            
+        </div>
+    </div>
+    <ul class="mod_singer_list js_singer_list">
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">1</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269382.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">吴宣仪</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="吴宣仪" data-id="982141217" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">888533票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">2</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269378.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">孟美岐</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="孟美岐" data-id="981527896" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">533043票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">3</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269405.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">SUNNEE</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="SUNNEE" data-id="981530392" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">335205票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">4</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269409.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">赖美云</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="赖美云" data-id="982141459" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">159965票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">5</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269397.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">Yamy</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="Yamy" data-id="981512412" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">115355票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">6</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269475.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">傅菁</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="傅菁" data-id="982141458" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">106005票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">7</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269461.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">段奥娟</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="段奥娟" data-id="982141373" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">100515票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">8</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269399.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">紫宁</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="紫宁" data-id="982141439" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">85429票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">9</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269470.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">杨超越</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="杨超越" data-id="982141375" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">84080票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">10</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269459.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">赵尧珂</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="赵尧珂" data-id="981522509" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">80907票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">11</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269403.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">强东玥</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="强东玥" data-id="981171271" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">73538票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">12</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269448.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">李子璇</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="李子璇" data-id="981186141" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">63269票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">13</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269433.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">李紫婷</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="李紫婷" data-id="982141486" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">39449票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">14</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269377.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">陈芳语</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="陈芳语" data-id="9843835" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">31251票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">15</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269434.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">吴映香</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="吴映香" data-id="981214511" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">26070票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">16</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269401.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘人语</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘人语" data-id="982141447" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">25917票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">17</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269419.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王晴</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王晴" data-id="982141466" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">25074票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">18</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269385.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">吕小雨</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="吕小雨" data-id="982141352" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">24284票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">19</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269432.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">吴芊盈</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="吴芊盈" data-id="982141489" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">21393票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">20</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269484.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">徐梦洁</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="徐梦洁" data-id="982141386" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">18785票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">21</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269390.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">葛佳慧</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="葛佳慧" data-id="982091654" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">18080票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">22</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269483.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">高秋梓</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="高秋梓" data-id="982141385" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">17594票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">23</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269431.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">高颖浠</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="高颖浠" data-id="982141483" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">16853票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">24</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269435.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">陈意涵</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="陈意涵" data-id="982141484" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">15732票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">25</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269467.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">鹿小草</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="鹿小草" data-id="981518468" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">14425票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">26</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269456.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">张溪</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="张溪" data-id="981029704" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">13743票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">27</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269376.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">许靖韵</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="许靖韵" data-id="98164219" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">11782票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">28</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269422.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">罗奕佳</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="罗奕佳" data-id="982141467" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">9710票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">29</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269417.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘丹萌</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘丹萌" data-id="9856335" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">9639票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">30</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269440.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">范薇</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="范薇" data-id="982141443" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">9304票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">31</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269412.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">热伊娜</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="热伊娜" data-id="982141461" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">9042票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">32</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269455.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">杨蕊涵</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="杨蕊涵" data-id="982141472" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">8380票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">33</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269393.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">罗怡恬</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="罗怡恬" data-id="982141437" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">8183票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">34</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269451.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">蒋申</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="蒋申" data-id="981445659" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">6705票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">35</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269439.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">戚砚笛</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="戚砚笛" data-id="982141481" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">6656票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">36</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269408.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">许诗茵</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="许诗茵" data-id="982122974" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">6549票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">37</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269457.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">陈盈燕</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="陈盈燕" data-id="981530355" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">5716票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">38</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269458.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">于美红</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="于美红" data-id="982141471" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">4687票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">39</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269384.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">焦曼婷</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="焦曼婷" data-id="982141235" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">4438票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">40</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269396.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">杜金雨</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="杜金雨" data-id="982141435" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">4211票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">41</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269441.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘思纤</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘思纤" data-id="982141446" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">3555票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">42</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269454.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">潘珺雅</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="潘珺雅" data-id="982141473" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">3518票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">43</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269481.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">菊麟</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="菊麟" data-id="982141383" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">3405票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">44</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269400.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">勾雪莹</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="勾雪莹" data-id="982141453" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2854票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">45</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269430.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">林珈安</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="林珈安" data-id="98112274" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2781票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">46</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269437.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘宇珊</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘宇珊" data-id="982141376" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2706票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">47</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269452.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">mena</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="mena" data-id="982141475" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2695票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">48</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269389.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">周雪</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="周雪" data-id="982141487" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2649票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">49</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269421.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">毛唯嘉</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="毛唯嘉" data-id="982141293" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2491票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">50</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269420.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘念</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘念" data-id="981442697" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2435票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">51</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269416.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">林君怡</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="林君怡" data-id="982141369" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2425票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">52</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269392.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">张馨月</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="张馨月" data-id="98187113" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2391票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">53</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269472.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">杨美琪</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="杨美琪" data-id="981195889" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2353票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">54</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269471.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">杨美玲</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="杨美玲" data-id="982141374" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2315票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">55</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269565.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王莫涵</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王莫涵" data-id="982141490" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2227票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">56</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269427.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">任真</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="任真" data-id="982141493" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2182票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">57</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269402.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王亦然</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王亦然" data-id="982141455" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2163票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">58</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269436.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">张新洁</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="张新洁" data-id="981123645" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">2105票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">59</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269395.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">魏瑾</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="魏瑾" data-id="981996570" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1745票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">60</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269387.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">朱天天</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="朱天天" data-id="982141378" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1732票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">61</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269415.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">韩丹</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="韩丹" data-id="982141387" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1722票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">62</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269449.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">倪秋云</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="倪秋云" data-id="981238111" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1664票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">63</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269465.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">李天韵</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="李天韵" data-id="982141465" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1544票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">64</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269383.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">陈怡凡</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="陈怡凡" data-id="982141444" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1510票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">65</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269487.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">张楚寒</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="张楚寒" data-id="982141371" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1485票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">66</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269406.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">姜彦汐</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="姜彦汐" data-id="982141372" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1457票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">67</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269425.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">苏芮琪</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="苏芮琪" data-id="982141449" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1449票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">68</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269442.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">吴茜</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="吴茜" data-id="982141441" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1418票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">69</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269429.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">张静萱</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="张静萱" data-id="982141448" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1270票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">70</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269463.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">Blair</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="Blair" data-id="982074233" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1238票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">71</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269476.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王曼君</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王曼君" data-id="982141457" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1190票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">72</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269388.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘德熙</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘德熙" data-id="982141379" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1144票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">73</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269394.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">丑丑</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="丑丑" data-id="982141440" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1128票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">74</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269482.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">邵夏</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="邵夏" data-id="982141384" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1127票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">75</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269410.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">吴小萱</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="吴小萱" data-id="982141370" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1011票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">76</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269447.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">罗智仪</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="罗智仪" data-id="982141436" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">1001票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">77</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269466.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">杨晗</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="杨晗" data-id="982141464" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">998票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">78</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269464.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王婷</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王婷" data-id="981157986" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">888票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">79</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269404.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘尼夷</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘尼夷" data-id="982141456" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">885票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">80</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269450.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">尹蕊</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="尹蕊" data-id="982141485" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">849票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">81</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269424.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">马兴珏</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="马兴珏" data-id="982141469" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">844票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">82</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269438.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">吴昀廷</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="吴昀廷" data-id="982141377" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">701票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">83</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269453.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">江璟儿</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="江璟儿" data-id="981415674" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">661票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">84</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269469.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">张瑜纹</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="张瑜纹" data-id="982141460" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">614票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">85</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269443.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">向俞星</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="向俞星" data-id="982141445" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">612票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">86</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269446.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">朱佳希</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="朱佳希" data-id="98963365" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">582票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">87</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269386.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">罗天舒</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="罗天舒" data-id="982141351" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">569票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">88</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269488.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">夏诗洁</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="夏诗洁" data-id="982141380" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">560票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">89</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269414.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">杨冰</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="杨冰" data-id="982141382" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">539票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">90</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269426.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王雅凛</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王雅凛" data-id="982141480" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">537票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">91</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269460.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">郑丞丞</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="郑丞丞" data-id="982141470" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">531票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">92</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269413.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王菊</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王菊" data-id="982141463" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">528票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">93</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269411.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">张鑫磊</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="张鑫磊" data-id="982141299" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">526票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">94</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269462.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">芮萌</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="芮萌" data-id="982141468" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">517票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">95</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269428.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">颜可欣</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="颜可欣" data-id="982141482" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">516票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">96</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269444.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">邱路晴</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="邱路晴" data-id="982141477" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">512票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">97</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269478.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">胡悦儿</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="胡悦儿" data-id="982141454" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">511票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">98</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269468.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">刘佳莹</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="刘佳莹" data-id="982141462" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">511票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">99</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269445.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">尹柔懿</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="尹柔懿" data-id="982141476" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">511票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">100</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269391.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">王珏萌</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="王珏萌" data-id="982141451" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">511票</p>
+                </div>
+            </div>
+        </li>
+        
+        <li class="singer_list__item">
+            <div class="singer_list__item_cont">
+                <span class="singer_list__index c_txt1 c_txt2">101</span>
+                <span class="singer_list__avatar">
+                    <img src="https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269479.png" alt="" class="singer_list__avatar_img">
+                </span>
+                <div class="singer_list__bd">
+                    <h2 class="singer_list__tit c_txt3">陈语嫣</h2>
+                </div>
+                <div class="singer_list__ft">
+                    <a href="javascript:;" data-name="陈语嫣" data-id="982141381" class="js_vote singer_list__btn c_txt3  ">PICK</a>
+                    <p class="singer_list__poll c_txt3">510票</p>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</section>
+    </section>
+<div id="js_vote_panel" class="qui_dialog js_popup" style="display:none">
+    <div class="qui_dialog__mask">
+        <div class="qui_dialog__box">
+            <div class="qui_dialog__hd">
+                <h4 class="qui_dialog__tit">我要投票</h4>
+            </div>
+            <div class="qui_dialog__bd">
+                <div class="support_col">
+                    <p class="support_col__text">支持：<span id="js_vote_panel_title"></span></p>
+                    <p class="support_col__tips">剩余<span class="sp_txt" id="js_vote_panel_ticket"></span>票</p>
+                </div>
+                <div class="support_col">
+                    <a class="js_vote_panel_minus support_act_btn support_act_btn--minus" href="javascript:;">-</a>
+                    <input class="support_act__input" type="text" value="1" id="js_vote_panel_input">
+                    <a class="js_vote_panel_plus support_act_btn support_act_btn--plus" href="javascript:;">+</a>
+                </div>
+                
+            </div>
+            <div class="qui_dialog__ft">
+                <a class="qui_dialog__btn js_vote_panel_close" href="javascript:;">关闭</a>
+                <a id="js_vote_panel_submit" class="qui_dialog__btn qui_dialog__btn--primary" href="javascript:;">投票</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="//y.gtimg.cn/music/h5/lib/js/zepto-1.0.min.js?max_age=2592000"></script>
+<script type="text/javascript" src="//y.gtimg.cn/music/h5/lib/js/music-1.0.min.js?max_age=604800"></script><audio data-web-player="1" style="height:0;width:0;display:none" autoplay=""></audio>
+<script>
+    
+
+    var configData = {
+        ticketUseoutTip: '票数已用完！快去QQ音乐播放器听本节目歌曲赚取票，再来支持你心仪的女孩吧~',
+        gedanIds: '4005152425|3860424304|3839845530|2621789627|2054225232|2372458944|3757689525|2061789505|2355856512|1730492968|1723769429|3969600404',
+        recomTopics: [{"Fid":253,"Ftitle":"国内最顶尖的音乐竞技节目","Fintro":"","Fh5_url":"https://y.qq.com/m/act/singer2018/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/246663.png","Fstatus":0,"Fmodify_time":"2018-04-18 13:08:42","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":254,"Ftitle":"其实...我是歌手","Fintro":"","Fh5_url":"https://y.qq.com/m/act/KingCross/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/274813.png","Fstatus":0,"Fmodify_time":"2018-05-05 21:44:46","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":255,"Ftitle":"薛之谦李荣浩毛不易，把生活唱成歌","Fintro":"","Fh5_url":"https://y.qq.com/m/act/wxgyj2018/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/272101.png","Fstatus":0,"Fmodify_time":"2018-04-28 23:04:49","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":256,"Ftitle":"林俊杰&张靓颖带你重唱经典","Fintro":"","Fh5_url":"https://y.qq.com/m/act/voiceofdreams2/v3/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/255762.png","Fstatus":0,"Fmodify_time":"2018-04-19 16:44:39","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":257,"Ftitle":"华晨宇&张杰演绎最强神曲改编！","Fintro":"","Fh5_url":"https://y.qq.com/m/act/BattleofTeana2/v3/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/220411.png","Fstatus":0,"Fmodify_time":"2018-04-19 16:48:01","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":258,"Ftitle":"华丽面具下，是意想不到的好声音","Fintro":"","Fh5_url":"https://y.qq.com/m/act/maskessinger2/v3/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/220408.png","Fstatus":0,"Fmodify_time":"2018-04-28 23:05:46","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":259,"Ftitle":"艺人化身“信使”，演绎热血历史","Fintro":"","Fh5_url":"https://y.qq.com/n/yqq/singer/0011rWEu1pKdMp.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/255769.png","Fstatus":0,"Fmodify_time":"2018-04-19 16:49:01","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":260,"Ftitle":"用心聆听，猜猜谁猜是原唱？","Fintro":"","Fh5_url":"https://y.qq.com/m/act/HiddenSinger2/v3/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/254816.png","Fstatus":0,"Fmodify_time":"2018-04-28 23:11:49","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":261,"Ftitle":"王源带你玩转经典","Fintro":"","Fh5_url":"https://y.qq.com/m/act/trumpcard3/v3/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/246672.png","Fstatus":0,"Fmodify_time":"2018-04-19 16:50:16","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":263,"Ftitle":"吴亦凡力撑有嘻哈，你有freestyle吗？","Fintro":"","Fh5_url":"https://y.qq.com/m/act/Rapofchina/v2/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/220449.png","Fstatus":0,"Fmodify_time":"2018-04-19 16:52:52","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":264,"Ftitle":"周杰伦陈奕迅加盟，竟同台抢人","Fintro":"","Fh5_url":"https://y.qq.com/m/act/singchina2/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/220447.png","Fstatus":0,"Fmodify_time":"2018-04-28 23:11:27","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":265,"Ftitle":"杨幂薛之谦华晨宇，见证未来偶像诞生！","Fintro":"","Fh5_url":"https://y.qq.com/m/act/thecomingone/v2/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/220462.png","Fstatus":0,"Fmodify_time":"2018-04-28 23:10:07","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":295,"Ftitle":"YG最强选秀综艺MIXNINE","Fintro":"","Fh5_url":"https://y.qq.com/m/act/mixnine/v3/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/220471.png","Fstatus":0,"Fmodify_time":"2018-04-27 19:19:40","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":313,"Ftitle":"歌手们在KTV的私房歌单","Fintro":"","Fh5_url":"https://y.qq.com/m/act/hising/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/273411.png","Fstatus":0,"Fmodify_time":"2018-04-28 23:12:15","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":326,"Ftitle":"蔡依林&王源想和你一起唱K","Fintro":"","Fh5_url":"https://y.qq.com/m/act/singwithme3/index.html?ADTAG=dujiacehua","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/274714.png","Fstatus":0,"Fmodify_time":"2018-05-05 01:05:17","Fschedule":38,"Fpc_url":"","Fsub_title":""},{"Fid":328,"Ftitle":"用流行传唱经典","Fintro":"","Fh5_url":"https://y.qq.com/m/act/classic/index.html","Fphoto1_url":"","Fphoto2_url":"https://y.gtimg.cn/music/common/upload/t_tv_songShow_topic/257369.png","Fstatus":0,"Fmodify_time":"2018-05-05 21:45:06","Fschedule":38,"Fpc_url":"","Fsub_title":""}],
+        rankInfo: {
+            toplistVoteTxt: 'PICK',
+            title: '',
+            titleImg: 'https://y.gtimg.cn/music/common/upload/t_tv_songShow/273171.png',
+            no: 819,
+            type: 2,
+            list: [{"Fid":85,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"SUNNEE","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269405.png","Fsinger_id":981530392,"_voteid":981530392},{"Fid":86,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"陈芳语","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269377.png","Fsinger_id":9843835,"_voteid":9843835},{"Fid":87,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"孟美岐","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269378.png","Fsinger_id":981527896,"_voteid":981527896},{"Fid":91,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"吴宣仪","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269382.png","Fsinger_id":982141217,"_voteid":982141217},{"Fid":92,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"Yamy","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269397.png","Fsinger_id":981512412,"_voteid":981512412},{"Fid":93,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"焦曼婷","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269384.png","Fsinger_id":982141235,"_voteid":982141235},{"Fid":94,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"段奥娟","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269461.png","Fsinger_id":982141373,"_voteid":982141373},{"Fid":95,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"罗天舒","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269386.png","Fsinger_id":982141351,"_voteid":982141351},{"Fid":96,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"杨超越","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269470.png","Fsinger_id":982141375,"_voteid":982141375},{"Fid":97,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘德熙","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269388.png","Fsinger_id":982141379,"_voteid":982141379},{"Fid":98,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"周雪","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269389.png","Fsinger_id":982141487,"_voteid":982141487},{"Fid":99,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"葛佳慧","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269390.png","Fsinger_id":982091654,"_voteid":982091654},{"Fid":100,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王珏萌","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269391.png","Fsinger_id":982141451,"_voteid":982141451},{"Fid":101,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"张馨月","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269392.png","Fsinger_id":98187113,"_voteid":98187113},{"Fid":102,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"罗怡恬","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269393.png","Fsinger_id":982141437,"_voteid":982141437},{"Fid":103,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"丑丑","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269394.png","Fsinger_id":982141440,"_voteid":982141440},{"Fid":104,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"魏瑾","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269395.png","Fsinger_id":981996570,"_voteid":981996570},{"Fid":105,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"杜金雨","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269396.png","Fsinger_id":982141435,"_voteid":982141435},{"Fid":106,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"陈怡凡","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269383.png","Fsinger_id":982141444,"_voteid":982141444},{"Fid":107,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"紫宁","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269399.png","Fsinger_id":982141439,"_voteid":982141439},{"Fid":108,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"勾雪莹","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269400.png","Fsinger_id":982141453,"_voteid":982141453},{"Fid":109,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘人语","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269401.png","Fsinger_id":982141447,"_voteid":982141447},{"Fid":111,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"强东玥","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269403.png","Fsinger_id":981171271,"_voteid":981171271},{"Fid":112,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘尼夷","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269404.png","Fsinger_id":982141456,"_voteid":982141456},{"Fid":113,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"许靖韵","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269376.png","Fsinger_id":98164219,"_voteid":98164219},{"Fid":114,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"姜彦汐","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269406.png","Fsinger_id":982141372,"_voteid":982141372},{"Fid":116,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"许诗茵","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269408.png","Fsinger_id":982122974,"_voteid":982122974},{"Fid":117,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"赖美云","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269409.png","Fsinger_id":982141459,"_voteid":982141459},{"Fid":118,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"吴小萱","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269410.png","Fsinger_id":982141370,"_voteid":982141370},{"Fid":119,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"张鑫磊","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269411.png","Fsinger_id":982141299,"_voteid":982141299},{"Fid":122,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"杨冰","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269414.png","Fsinger_id":982141382,"_voteid":982141382},{"Fid":123,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"韩丹","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269415.png","Fsinger_id":982141387,"_voteid":982141387},{"Fid":124,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"林君怡","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269416.png","Fsinger_id":982141369,"_voteid":982141369},{"Fid":125,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"任真","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269427.png","Fsinger_id":982141493,"_voteid":982141493},{"Fid":126,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘丹萌","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269417.png","Fsinger_id":9856335,"_voteid":9856335},{"Fid":127,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王晴","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269419.png","Fsinger_id":982141466,"_voteid":982141466},{"Fid":128,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘念","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269420.png","Fsinger_id":981442697,"_voteid":981442697},{"Fid":129,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"毛唯嘉","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269421.png","Fsinger_id":982141293,"_voteid":982141293},{"Fid":130,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"罗奕佳","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269422.png","Fsinger_id":982141467,"_voteid":982141467},{"Fid":131,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"马兴珏","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269424.png","Fsinger_id":982141469,"_voteid":982141469},{"Fid":132,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"苏芮琪","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269425.png","Fsinger_id":982141449,"_voteid":982141449},{"Fid":133,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王雅凛","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269426.png","Fsinger_id":982141480,"_voteid":982141480},{"Fid":134,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"颜可欣","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269428.png","Fsinger_id":982141482,"_voteid":982141482},{"Fid":135,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"张静萱","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269429.png","Fsinger_id":982141448,"_voteid":982141448},{"Fid":136,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"林珈安","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269430.png","Fsinger_id":98112274,"_voteid":98112274},{"Fid":138,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王莫涵","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269565.png","Fsinger_id":982141490,"_voteid":982141490},{"Fid":139,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"李紫婷","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269433.png","Fsinger_id":982141486,"_voteid":982141486},{"Fid":140,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"吴映香","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269434.png","Fsinger_id":981214511,"_voteid":981214511},{"Fid":141,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"陈意涵","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269435.png","Fsinger_id":982141484,"_voteid":982141484},{"Fid":142,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"张楚寒","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269487.png","Fsinger_id":982141371,"_voteid":982141371},{"Fid":143,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"张新洁","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269436.png","Fsinger_id":981123645,"_voteid":981123645},{"Fid":144,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘宇珊","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269437.png","Fsinger_id":982141376,"_voteid":982141376},{"Fid":145,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"吴昀廷","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269438.png","Fsinger_id":982141377,"_voteid":982141377},{"Fid":146,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"戚砚笛","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269439.png","Fsinger_id":982141481,"_voteid":982141481},{"Fid":147,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"范薇","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269440.png","Fsinger_id":982141443,"_voteid":982141443},{"Fid":148,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘思纤","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269441.png","Fsinger_id":982141446,"_voteid":982141446},{"Fid":149,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"吴茜","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269442.png","Fsinger_id":982141441,"_voteid":982141441},{"Fid":150,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"向俞星","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269443.png","Fsinger_id":982141445,"_voteid":982141445},{"Fid":151,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"邱路晴","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269444.png","Fsinger_id":982141477,"_voteid":982141477},{"Fid":152,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"尹柔懿","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269445.png","Fsinger_id":982141476,"_voteid":982141476},{"Fid":153,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"朱佳希","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269446.png","Fsinger_id":98963365,"_voteid":98963365},{"Fid":155,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"罗智仪","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269447.png","Fsinger_id":982141436,"_voteid":982141436},{"Fid":156,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"李子璇","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269448.png","Fsinger_id":981186141,"_voteid":981186141},{"Fid":157,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"倪秋云","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269449.png","Fsinger_id":981238111,"_voteid":981238111},{"Fid":158,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"尹蕊","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269450.png","Fsinger_id":982141485,"_voteid":982141485},{"Fid":159,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"蒋申","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269451.png","Fsinger_id":981445659,"_voteid":981445659},{"Fid":160,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"mena","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269452.png","Fsinger_id":982141475,"_voteid":982141475},{"Fid":161,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"江璟儿","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269453.png","Fsinger_id":981415674,"_voteid":981415674},{"Fid":162,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"潘珺雅","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269454.png","Fsinger_id":982141473,"_voteid":982141473},{"Fid":163,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"杨蕊涵","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269455.png","Fsinger_id":982141472,"_voteid":982141472},{"Fid":164,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"张溪","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269456.png","Fsinger_id":981029704,"_voteid":981029704},{"Fid":165,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"陈盈燕","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269457.png","Fsinger_id":981530355,"_voteid":981530355},{"Fid":166,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"于美红","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269458.png","Fsinger_id":982141471,"_voteid":982141471},{"Fid":167,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"赵尧珂","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269459.png","Fsinger_id":981522509,"_voteid":981522509},{"Fid":168,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"郑丞丞","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269460.png","Fsinger_id":982141470,"_voteid":982141470},{"Fid":169,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"吕小雨","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269385.png","Fsinger_id":982141352,"_voteid":982141352},{"Fid":170,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"芮萌","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269462.png","Fsinger_id":982141468,"_voteid":982141468},{"Fid":171,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"Blair","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269463.png","Fsinger_id":982074233,"_voteid":982074233},{"Fid":172,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王婷","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269464.png","Fsinger_id":981157986,"_voteid":981157986},{"Fid":173,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"李天韵","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269465.png","Fsinger_id":982141465,"_voteid":982141465},{"Fid":174,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"杨晗","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269466.png","Fsinger_id":982141464,"_voteid":982141464},{"Fid":175,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"鹿小草","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269467.png","Fsinger_id":981518468,"_voteid":981518468},{"Fid":176,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"刘佳莹","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269468.png","Fsinger_id":982141462,"_voteid":982141462},{"Fid":177,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"张瑜纹","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269469.png","Fsinger_id":982141460,"_voteid":982141460},{"Fid":178,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"朱天天","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269387.png","Fsinger_id":982141378,"_voteid":982141378},{"Fid":179,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"杨美玲","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269471.png","Fsinger_id":982141374,"_voteid":982141374},{"Fid":180,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"杨美琪","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269472.png","Fsinger_id":981195889,"_voteid":981195889},{"Fid":182,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"傅菁","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269475.png","Fsinger_id":982141458,"_voteid":982141458},{"Fid":183,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王曼君","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269476.png","Fsinger_id":982141457,"_voteid":982141457},{"Fid":184,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"胡悦儿","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269478.png","Fsinger_id":982141454,"_voteid":982141454},{"Fid":185,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"陈语嫣","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269479.png","Fsinger_id":982141381,"_voteid":982141381},{"Fid":186,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"夏诗洁","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269488.png","Fsinger_id":982141380,"_voteid":982141380},{"Fid":187,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"菊麟","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269481.png","Fsinger_id":982141383,"_voteid":982141383},{"Fid":188,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"邵夏","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269482.png","Fsinger_id":982141384,"_voteid":982141384},{"Fid":189,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"高秋梓","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269483.png","Fsinger_id":982141385,"_voteid":982141385},{"Fid":190,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"徐梦洁","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269484.png","Fsinger_id":982141386,"_voteid":982141386},{"Fid":191,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王亦然","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269402.png","Fsinger_id":982141455,"_voteid":982141455},{"Fid":194,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"高颖浠","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269431.png","Fsinger_id":982141483,"_voteid":982141483},{"Fid":195,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"吴芊盈","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269432.png","Fsinger_id":982141489,"_voteid":982141489},{"Fid":196,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"热伊娜","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269412.png","Fsinger_id":982141461,"_voteid":982141461},{"Fid":197,"Fschedule":"343","Fsong_team":"37","Fsinger_name":"王菊","Fh5_photo_url":"https://y.gtimg.cn/music/common/upload/t_tv_hot_singer/269413.png","Fsinger_id":982141463,"_voteid":982141463}],
+            ids: [981530392,9843835,981527896,982141217,981512412,982141235,982141373,982141351,982141375,982141379,982141487,982091654,982141451,98187113,982141437,982141440,981996570,982141435,982141444,982141439,982141453,982141447,981171271,982141456,98164219,982141372,982122974,982141459,982141370,982141299,982141382,982141387,982141369,982141493,9856335,982141466,981442697,982141293,982141467,982141469,982141449,982141480,982141482,982141448,98112274,982141490,982141486,981214511,982141484,982141371,981123645,982141376,982141377,982141481,982141443,982141446,982141441,982141445,982141477,982141476,98963365,982141436,981186141,981238111,982141485,981445659,982141475,981415674,982141473,982141472,981029704,981530355,982141471,981522509,982141470,982141352,982141468,982074233,981157986,982141465,982141464,981518468,982141462,982141460,982141378,982141374,981195889,982141458,982141457,982141454,982141381,982141380,982141383,982141384,982141385,982141386,982141455,982141483,982141489,982141461,982141463]
+        }
+        
+    };
+
+    function showError(t){M.confirm({title:"",message:t,cb:function(t){t&&location.reload()}})}function doLogin(){M.user.login({loginType:0,noConfirm:1,cb:function(t){t&&location.reload()}})}function initGedan(t){var n=function(t){var n,i="",s=_.escape;Array.prototype.join;return i+='<div class="mod_tit">\r\n    <div class="tit__bd">\r\n        <h2 class="tit__txt_sub c_txt3">推荐歌单</h2>\r\n    </div>\r\n</div>\r\n<ul class="qui_equal_col qui_equal_col--3">\r\n    ',t.list.forEach(function(t){i+='\r\n    <li class="qui_equal_col__item">\r\n        <a class="qui_equal_col__box js_open_gedan" href="javascript:;" data-gedanid="'+s(t.disstid)+'">\r\n            <div class="qui_equal_col__media">\r\n                <img class="qui_equal_col__img" src="'+s(M.fixUrl(t.logo))+'" alt="">\r\n                <div class="qui_equal_col__count">\r\n                    <i class="qui_equal_col__listen"></i>\r\n                    ',t.visitnum&&(i+='\r\n                    <span class="qui_equal_col__number">'+(null==(n=t.visitnum>1e4?(t.visitnum/1e4).toFixed(1)+"万":t.visitnum)?"":n)+"</span>\r\n                    "),i+='\r\n                </div>\r\n                <svg class="icon_svg">\r\n                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_play"></use>\r\n                </svg>\r\n            </div>\r\n            <h3 class="qui_equal_col__tit qui_equal_col--row_2 c_txt1">'+s(t.dissname)+"</h3>\r\n        </a>\r\n    </li>\r\n    "}),i+="\r\n    \r\n</ul>"};M.ajax({type:"GET",url:"//c.y.qq.com/qzone-music/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg",data:{format:"json",disstid:t.join(",")},dataType:"json",success:function(t){if(t&&0==t.code&&t.cdlist&&t.cdlist.length){var i=n({list:t.cdlist});$(".js_wrap").html(i)}else showError("服务器返回数据失败，错误码："+t.code+"，请稍后重试！")},error:function(){showError("网络繁忙，请稍后重试！")}}),$(document).on("tap",".js_open_gedan",function(){var t=$(this).data("gedanid");t?$.browser.music?M.client.open("ui","gedan",{id:t}):setTimeout(function(){location.href=location.protocol+"//y.qq.com/w/taoge.html?id="+t},100):M.tips("歌单id为空")})}function initTopics(t){var n=function(t){var n,i="";Array.prototype.join;return i+='<div class="mod_tit">\r\n    <div class="tit__bd">\r\n        <h2 class="tit__txt_sub c_txt3">推荐综艺</h2>\r\n    </div>\r\n</div>\r\n<ul class="friendLink_list">\r\n    ',t.list.forEach(function(t){i+='\r\n    <li class="friendLink_list__item js_link" data-link="'+(null==(n=t.Fh5_url)?"":n)+'">\r\n        <img src="'+(null==(n=M.fixUrl(t.Fphoto2_url))?"":n)+'" class="friendLink_list__img" alt="">\r\n        <h3 class="friendLink_list__txt c_txt3">'+(null==(n=t.Ftitle)?"":n)+'</h3>\r\n        <p class="friendLink_list__desc c_txt3">'+(null==(n=t.Fintro)?"":n)+"</p>\r\n    </li>\r\n    "}),i+="\r\n</ul>"},i=n({list:t});$(".js_wrap").html(i)}function initRanks(t){function n(){voteUtils.getVotes(t.no,t.ids.join(","),function(n){var s=n.result;i=n.usrlimit||0,1==t.type||2==t.type?t.list.forEach(function(t){t.voteNum=parseInt(s[t._voteid])||0}):3==t.type||4==t.type?t.list.forEach(function(n){n.voteNum=0;var i=3==t.type?n._songlist:n._singerlist;i&&i.length&&i.forEach(function(t){t.voteNum=parseInt(s[t._voteid])||0,n.voteNum+=t.voteNum})}):5==t.type&&t.list.forEach(function(t){t.voteNum=0,t._singerlist&&(t._singerlist.forEach(function(n){n.voteNum=0,n.__songlist&&(n.__songlist.forEach(function(t){t.voteNum=parseInt(s[t._voteid])||0,n.voteNum+=t.voteNum}),t.voteNum+=n.voteNum,n.__songlist=n.__songlist.sort(function(t,n){return n.voteNum-t.voteNum}))}),t._singerlist=t._singerlist.sort(function(t,n){return n.voteNum-t.voteNum}))}),t.list=t.list.sort(function(t,n){return n.voteNum-t.voteNum}),renderRanklist(t.type,t.title,t.titleImg,t.list,{toplistVoteTxt:t.toplistVoteTxt,isVoteEnd:n.end,isUseout:i<=0&&M.user.isLogin()})})}var i=0;n(),$(document).on("tap",".js_vote",function(){var s=$(this);if(s.hasClass("js_end"))return M.alert("该活动已结束");if(s.hasClass("js_sendgift"))return void($.browser.music?(M.client.open("ui","hideMiniPlayer",{}),M.client.invoke("other","sendGift",{mid:s.attr("data-mid")},function(t){t&&0==t.code&&n(),M.client.open("ui","showMiniPlayer",{})})):M.client.open("ui","openUrl",{url:location.href}));if(!M.user.isLogin())return doLogin();if(!i||i<=0)return M.alert(configData.ticketUseoutTip||"您的余票为0");var r=s.data("id"),e=s.data("name");voteUtils.renderVotePanel(t.no,r,i,e)}).on("tap","#js_vote_panel_submit",function(){var s=$(this),r=s.data("voteid"),e=parseInt($("#js_vote_panel_input").val());(!e||e<=0)&&(e=1),e>i&&(e=i),voteUtils.submitVote(t.no,r,e,function(t,i){t?M.alert(t):($("#js_vote_panel").hide(),M.alert("投票成功"),n())})}).on("tap",".js_vote_panel_close",function(){$("#js_vote_panel").hide()}).on("tap",".js_vote_panel_minus",function(){var t=$("#js_vote_panel_input"),n=(parseInt(t.val())||1)-1;t.val(n<1?1:n)}).on("tap",".js_vote_panel_plus",function(){var t=$("#js_vote_panel_input"),n=(parseInt(t.val())||0)+1,i=parseInt(t.data("usrlimit"));t.val(n>i?i:n)}).on("tap",".js_singer_song_item",function(){$(this).parent().toggleClass("singer_list__item--expand")}).on("tap",".js_team_singer_item",function(){var t=$(this).data("team");$(".js_team_singer_item").removeClass("team_item--current c_txt3"),$(this).addClass("team_item--current c_txt3"),$(".js_team_singer_ul").hide(),$('.js_team_singer_ul[data-team="'+t+'"]').show()})}function renderRanklist(t,n,i,s,r){var e={1:function(t){var n,i="",s=_.escape;Array.prototype.join;i+='<section class="mod_hit ">\r\n    <div class="mod_tit">\r\n        <div class="tit__bd">\r\n            <h2 class="tit__txt c_txt3">'+s(t.title)+"</h2>\r\n            ",t.titleImg&&(i+='\r\n            <img src="'+(null==(n=M.fixUrl(t.titleImg))?"":n)+'" class="tit__bg" alt="">\r\n            '),i+='\r\n        </div>\r\n    </div>\r\n    <ul class="hit_list js_song_list">\r\n        ';for(var r=0;r<(t.list&&t.list.length);r++){var e=t.list[r],l=e.Fsinger_name;e.Fsinger_name2&&(l+=" / "+e.Fsinger_name2),e.Fsinger_name3&&(l+=" / "+e.Fsinger_name3),e.Fsinger_name4&&(l+=" / "+e.Fsinger_name4),i+='\r\n        <li class="hit_list__item js_song">\r\n            <span class="hit_list__index c_txt3">'+(null==(n=r+1)?"":n)+'</span>\r\n            <a class="hit_list__avatar">\r\n                <img src="'+(null==(n=M.fixUrl(e.Fh5_photo_url))?"":n)+'" onerror="this.src=\'//y.gtimg.cn/mediastyle/music_v12/img/default_album.png?max_age=2592000\';this.onerror=null" class="hit_list__avatar_img" alt="'+(null==(n=e.singername)?"":n)+'">\r\n                <i class="qui_equal_col__play js_playsong" title="播放" data-id="'+(null==(n=e.Ftrack_id)?"":n)+'"></i>\r\n            </a>\r\n            <div class="hit_list__bd c_bor1">\r\n                <div class="hit_list__info">\r\n                    <div class="hit_list__txt">\r\n                        <h3 class="hit_list__tit c_txt3">'+s(e.Ftrack_name)+'</h3>\r\n                        <p class="hit_list__desc c_txt3">'+s(l)+'</p>\r\n                    </div>\r\n                    <div class="hit_list__other">\r\n                        <a class="hit_list__btn c_txt3 js_vote '+(null==(n=t.isVoteEnd||t.isUseout?"js_sendgift":"")?"":n)+'" href="javascript:;" data-id="'+(null==(n=e.Ftrack_id)?"":n)+'" data-mid="'+(null==(n=e.Ftrack_mid)?"":n)+'" data-name="'+(null==(n=e.Ftrack_name)?"":n)+'">\r\n                            ',i+=t.isVoteEnd||t.isUseout?"\r\n                            送礼                            \r\n                            ":"\r\n                            "+(null==(n=t.toplistVoteTxt||"投票")?"":n)+"\r\n                            ",i+='\r\n                        </a>\r\n                        <span class="hit_list__count c_txt3">'+(null==(n=e.voteNum>1e6?(e.voteNum/1e4).toFixed(1)+"万":e.voteNum||0)?"":n)+"票</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </li>\r\n        "}return i+="\r\n    </ul>\r\n</section>\r\n"},2:function(t){var n,i="",s=_.escape;Array.prototype.join;i+='<section class="mod_hit ">\r\n    <div class="mod_tit">\r\n        <div class="tit__bd">\r\n            <h2 class="tit__txt c_txt3">'+s(t.title)+"</h2>\r\n            ",t.titleImg&&(i+='\r\n            <img src="'+(null==(n=M.fixUrl(t.titleImg))?"":n)+'" class="tit__bg" alt="">\r\n            '),i+='\r\n        </div>\r\n    </div>\r\n    <ul class="mod_singer_list js_singer_list">\r\n        ';for(var r=0;r<(t.list&&t.list.length);r++){var e=t.list[r];i+='\r\n        <li class="singer_list__item">\r\n            <div class="singer_list__item_cont">\r\n                <span class="singer_list__index c_txt1 c_txt2">'+(null==(n=r+1)?"":n)+'</span>\r\n                <span class="singer_list__avatar">\r\n                    <img src="'+(null==(n=e.Fh5_photo_url||M.getPic("singer",e.Fsinger_mid||e.Fsinger_id,150))?"":n)+'" alt="" class="singer_list__avatar_img">\r\n                </span>\r\n                <div class="singer_list__bd">\r\n                    <h2 class="singer_list__tit c_txt3">'+(null==(n=e.Fsinger_name)?"":n)+'</h2>\r\n                </div>\r\n                <div class="singer_list__ft">\r\n                    <a href="javascript:;" data-name="'+(null==(n=e.Fsinger_name)?"":n)+'" data-id="'+(null==(n=e.Fsinger_id)?"":n)+'" class="js_vote singer_list__btn c_txt3 '+(null==(n=t.isVoteEnd||t.isUseout?"disable":"")?"":n)+" "+(null==(n=t.isVoteEnd?"js_end":"")?"":n)+'">'+(null==(n=t.toplistVoteTxt||"投票")?"":n)+'</a>\r\n                    <p class="singer_list__poll c_txt3">'+(null==(n=e.voteNum>1e6?(e.voteNum/1e4).toFixed(1)+"万":e.voteNum||0)?"":n)+"票</p>\r\n                </div>\r\n            </div>\r\n        </li>\r\n        "}return i+="\r\n    </ul>\r\n</section>\r\n    "},3:function(t){var n,i="",s=_.escape;Array.prototype.join;i+='<section class="mod_hit ">\r\n    <div class="mod_tit">\r\n        <div class="tit__bd">\r\n            <h2 class="tit__txt c_txt3">'+s(t.title)+"</h2>\r\n            ",t.titleImg&&(i+='\r\n            <img src="'+(null==(n=M.fixUrl(t.titleImg))?"":n)+'" class="tit__bg" alt="">\r\n            '),i+='\r\n        </div>\r\n    </div>\r\n    <ul class="mod_singer_list js_singer_song_list">\r\n        ';for(var r=0;r<(t.list&&t.list.length);r++){var e=t.list[r];if(i+='\r\n        <li class="singer_list__item">\r\n            <div class="singer_list__item_cont js_singer_song_item">\r\n                <span class="singer_list__index c_txt1 c_txt2">'+(null==(n=r+1)?"":n)+'</span>\r\n                <span class="singer_list__avatar">\r\n                    <img src="'+(null==(n=e.Fh5_photo_url||M.getPic("singer",e.Fsinger_mid,150))?"":n)+'" alt="" class="singer_list__avatar_img">\r\n                </span>\r\n                <div class="singer_list__bd">\r\n                    <h2 class="singer_list__tit c_txt3">'+(null==(n=e.Fsinger_name)?"":n)+"</h2>\r\n                    ",e._songlist&&e._songlist.length&&(i+='<p class="singer_list__txt c_txt3">共'+(null==(n=e._songlist.length)?"":n)+"首歌</p>"),i+='\r\n                </div>\r\n                <div class="singer_list__ft">\r\n                    <a href="javascript:;" class="singer_list__btn c_txt3">\r\n                    ',i+=t.isVoteEnd||t.isUseout?"\r\n                    送礼                            \r\n                    ":"\r\n                    "+(null==(n=t.toplistVoteTxt||"投票")?"":n)+"\r\n                    ",i+='\r\n                    </a>\r\n                    <p class="singer_list__poll c_txt3">'+(null==(n=e.voteNum>1e6?(e.voteNum/1e4).toFixed(1)+"万":e.voteNum||0)?"":n)+"票</p>\r\n                </div>\r\n            </div>\r\n            ",e._songlist&&e._songlist.length){e._songlist.sort(function(t,n){return n.voteNum-t.voteNum}),i+='\r\n            <div class="singer_list__songs c_bg2">\r\n                ';for(var l=0;l<e._songlist.length;l++){var a=e._songlist[l];i+='\r\n                <div class="singer_list__songs_item c_bor1">\r\n                    <span class="singer_list__song_name c_txt3">'+s(a.Ftrack_name)+'</span>\r\n                    <a href="javascript:;" class="singer_list__song_play c_txt3 js_playsong" data-id="'+(null==(n=a.Ftrack_id)?"":n)+'" data-mid="'+(null==(n=a.Ftrack_mid)?"":n)+'">\r\n                        <svg class="icon_svg c_txt3"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_play"></use></svg>\r\n                    </a>\r\n                    <div class="singer_list__song_act">\r\n                        <a href="javascript:;" class="js_vote singer_list__btn c_txt3 '+(null==(n=t.isVoteEnd||t.isUseout?"js_sendgift":"")?"":n)+'" data-id="'+(null==(n=a._voteid)?"":n)+'" data-mid="'+(null==(n=a.Ftrack_mid)?"":n)+'" data-name="'+(null==(n=a.Ftrack_name)?"":n)+'">\r\n                            ',i+=t.isVoteEnd||t.isUseout?"\r\n                            送礼                            \r\n                            ":"\r\n                            "+(null==(n=t.toplistVoteTxt||"投票")?"":n)+"\r\n                            ",i+='\r\n                        </a>\r\n                        <span class="singer_list__count c_txt3">'+(null==(n=a.voteNum>1e6?(a.voteNum/1e4).toFixed(1)+"万":a.voteNum||0)?"":n)+"票</span>\r\n                    </div>\r\n                </div>\r\n                "}i+="\r\n            </div>\r\n            "}i+="\r\n        </li>\r\n        "}return i+="\r\n    </ul>\r\n</section>\r\n        "},4:function(t){var n,i="",s=_.escape;Array.prototype.join;i+='<section>\r\n    <div class="mod_tit">\r\n        <div class="tit__bd">\r\n            <!--可以自定义标题内容-->\r\n            <h2 class="tit__txt c_txt3">'+s(t.title)+"</h2>\r\n            ",t.titleImg&&(i+='\r\n            <img src="'+(null==(n=M.fixUrl(t.titleImg))?"":n)+'" class="tit__bg" alt="">\r\n            '),i+='\r\n        </div>\r\n        \r\n    </div>\r\n    <div class="js_team_singer_list mod_team">\r\n        <div class="mod_team__cont">\r\n            ';for(var r=0;r<(t.list&&t.list.length);r++){var e=t.list[r];t.curTeam||0!=r||(t.curTeam=e.Fid),i+='\r\n            <div class="js_team_singer_item team_item ',i+=t.curTeam==e.Fid?" team_item--current c_txt1 c_txt3":"c_txt1",i+='" data-team="'+(null==(n=e.Fid)?"":n)+'">\r\n                <div class="team_item__show">\r\n                    <span class="team_item__show__sort">'+(null==(n=r+1)?"":n)+'</span>\r\n                    <img class="team_item__pic" src="'+(null==(n=e.Fh5_photo_url)?"":n)+'">\r\n                </div>\r\n                <p class="team_item__name">'+s(e.Fteam_title)+'</p>\r\n                <p class="team_item__text">'+(null==(n=e.voteNum>1e6?(e.voteNum/1e4).toFixed(1)+"万":e.voteNum||0)?"":n)+"票</p>\r\n            </div>\r\n            "}for(i+='\r\n        </div>\r\n        <div class="mod_team_bg c_bg2"></div>\r\n    </div>\r\n    <div class="mod_team_tab">\r\n        ',r=0;r<(t.list&&t.list.length);r++){var e=t.list[r];if(t.curTeam||0!=r||(t.curTeam=e.Fid),i+='\r\n        <ul class="js_team_singer_ul mod_singer_list" data-team="'+(null==(n=e.Fid)?"":n)+'" ',t.curTeam!=e.Fid&&(i+=' style="display: none;"'),i+=">\r\n            ",e._singerlist&&e._singerlist.length){e._singerlist.sort(function(t,n){return n.voteNum-t.voteNum}),i+="\r\n            ";for(var l=0,a=e._singerlist.length;l<a;l++){var o=e._singerlist[l];i+='\r\n            <li class="singer_list__item">\r\n                <div class="singer_list__item_cont">\r\n                    <span class="singer_list__index c_txt1 c_txt2">'+(null==(n=l+1)?"":n)+'</span>\r\n                    <span class="singer_list__avatar">\r\n                        <img src="'+(null==(n=o.Fh5_photo_url||M.getPic("singer",o.Fsinger_mid||o.Fsinger_id))?"":n)+'" class="singer_list__avatar_img" alt="">\r\n                    </span>\r\n                    <div class="singer_list__bd">\r\n                        <h3 class="singer_list__tit c_txt3">'+s(o.Fsinger_name)+'</h3>\r\n                        <p class="singer_list__txt c_txt3">'+(null==(n=e.Fteam_title)?"":n)+'</p>\r\n                        \r\n                    </div>\r\n                    <div class="singer_list__ft">\r\n                        <a href="javascript:;" class="js_vote singer_list__btn c_txt3 '+(null==(n=t.isVoteEnd||t.isUseout?"disable":"")?"":n)+" "+(null==(n=t.isVoteEnd?"js_end":"")?"":n)+'" data-id="'+(null==(n=o.Fsinger_id)?"":n)+'" data-name="'+(null==(n=o.Fsinger_name)?"":n)+'">'+(null==(n=t.toplistVoteTxt||"投票")?"":n)+'</a>\r\n                        <p class="singer_list__poll c_txt3">'+(null==(n=o.voteNum>1e6?(o.voteNum/1e4).toFixed(1)+"万":o.voteNum||0)?"":n)+"票</p>\r\n                    </div>\r\n                </div>\r\n            </li>\r\n            "}i+="\r\n            "}i+="\r\n        </ul>\r\n        "}return i+="\r\n    </div>\r\n</div>\r\n    "},5:function(t){var n,i="",s=_.escape;Array.prototype.join;i+='<!-- 人气战队歌手歌曲榜 -->\r\n<section>\r\n    <div class="mod_tit c_txt1">\r\n        <div class="tit__bd">\r\n            <!--可以自定义标题背景图-->\r\n            <h2 class="tit__txt c_txt3">'+s(t.title)+"</h2>\r\n            ",t.titleImg&&(i+='\r\n            <img src="'+(null==(n=M.fixUrl(t.titleImg))?"":n)+'" class="tit__bg" alt="">\r\n            '),i+='\r\n        </div>\r\n        \r\n    </div>\r\n\r\n    <div class="js_team_singer_song_list mod_team">\r\n        <div class="mod_team__cont">\r\n            ';for(var r=0;r<t.list.length;r++){var e=t.list[r];t.curTeam||0!=r||(t.curTeam=e.Fid),i+='\r\n            <div class="js_team_singer_item team_item ',i+=t.curTeam==e.Fid?" team_item--current c_txt1 c_txt3":"c_txt1",i+='" data-team="'+(null==(n=e.Fid)?"":n)+'">\r\n                <div class="team_item__show">\r\n                    <span class="team_item__show__sort">'+(null==(n=r+1)?"":n)+'</span>\r\n                    <img class="team_item__pic" src="'+(null==(n=e.Fh5_photo_url)?"":n)+'">\r\n                </div>\r\n                <p class="team_item__name">'+s(e.Fteam_title)+'</p>\r\n                <p class="team_item__text">'+(null==(n=e.voteNum>1e6?(e.voteNum/1e4).toFixed(1)+"万":e.voteNum||0)?"":n)+"票</p>\r\n            </div>\r\n            "}for(i+='\r\n        </div>\r\n        <div class="mod_team_bg c_bg2"></div>\r\n    </div>\r\n    <div class="mod_team_tab">\r\n        ',r=0;r<t.list.length;r++){var e=t.list[r];if(t.curTeam||0!=r||(t.curTeam=e.Fid),i+='\r\n        <ul class="mod_singer_list js_team_singer_ul" data-team="'+(null==(n=e.Fid)?"":n)+'" ',t.curTeam!=e.Fid&&(i+=' style="display: none;"'),i+=">\r\n        ",e._singerlist&&e._singerlist.length){i+="\r\n        ";for(var l=0,a=e._singerlist.length;l<a;l++){var o=e._singerlist[l];if(i+='\r\n        <li class="singer_list__item">\r\n            <div class="js_singer_song_item singer_list__item_cont">\r\n                <span class="singer_list__index c_txt1 c_txt2">'+(null==(n=l+1)?"":n)+'</span>\r\n                <span class="singer_list__avatar">\r\n                    <img src="'+(null==(n=o.Fh5_photo_url||M.getPic("singer",o.Fsinger_mid||o.Fsinger_id,150))?"":n)+'" class="singer_list__avatar_img" alt="">\r\n                </span>\r\n                <div class="singer_list__bd">\r\n                    <h2 class="singer_list__tit c_txt3">'+s(o.Fsinger_name)+'</h2>\r\n                    <p class="singer_list__txt c_txt3">共'+(null==(n=o.__songlist&&o.__songlist.length||0)?"":n)+'首歌</p>\r\n                </div>\r\n                <div class="singer_list__ft">\r\n                    <a href="javascript:;" class="singer_list__btn c_txt3">\r\n                        ',i+=t.isVoteEnd||t.isUseout?"\r\n                        送礼                            \r\n                        ":"\r\n                        "+(null==(n=t.toplistVoteTxt||"投票")?"":n)+"\r\n                        ",i+='\r\n                    </a>\r\n                    <p class="singer_list__poll c_txt3">'+(null==(n=o.voteNum>1e6?(o.voteNum/1e4).toFixed(1)+"万":o.voteNum||0)?"":n)+"票</p>\r\n                </div>\r\n            </div>\r\n            ",o.__songlist&&o.__songlist.length){i+='\r\n            <div class="singer_list__songs c_bg2">\r\n                ';for(var c=0;c<o.__songlist.length;c++){var d=o.__songlist[c];i+='\r\n                <div class="singer_list__songs_item c_bor1 js_song">\r\n                    <span class="singer_list__song_name c_txt3">'+s(d.Ftrack_name)+'</span>\r\n                    <a href="javascript:;" class="singer_list__song_play c_txt1 js_playsong" data-id="'+(null==(n=d.Ftrack_id)?"":n)+'" data-mid="'+(null==(n=d.Ftrack_mid)?"":n)+'">\r\n                        <svg class="icon_svg c_txt3"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_play"></use></svg>\r\n                    </a>\r\n                    <div class="singer_list__song_act">\r\n                        <a href="javascript:;" class="js_vote singer_list__btn c_txt3 '+(null==(n=t.isVoteEnd||t.isUseout?"js_sendgift":"")?"":n)+'" data-id="'+(null==(n=d.Ftrack_id)?"":n)+'" data-name="'+(null==(n=d.Ftrack_name)?"":n)+'" data-mid="'+(null==(n=d.Ftrack_mid)?"":n)+'">\r\n                            ',i+=t.isVoteEnd||t.isUseout?"\r\n                            送礼                            \r\n                            ":"\r\n                            "+(null==(n=t.toplistVoteTxt||"投票")?"":n)+"\r\n                            ",i+='\r\n                        </a>\r\n                        <span class="singer_list__count c_txt3">'+(null==(n=d.voteNum>1e6?(d.voteNum/1e4).toFixed(1)+"万":d.voteNum||0)?"":n)+"票</span>\r\n                    </div>\r\n                </div>\r\n                "}i+="\r\n            </div>\r\n            "}i+="\r\n        </li>\r\n        "}i+="\r\n        "}i+="\r\n        </ul>\r\n        "}return i+="\r\n    </div>\r\n</section>"}};if(e[t]){var l=$.extend({title:n,titleImg:i,list:s},r),a=e[t](l);$(".js_wrap").html(a)}}function init(t){if(!t)return void M.alert("链接参数错误，缺少type");if("gedan"==t&&configData.gedanIds){if(!configData.gedanIds)return void M.alert("页面数据错误，无歌单数据");initGedan(configData.gedanIds.split("|"))}else if("topic"==t){if(!configData.recomTopics)return void M.alert("页面数据错误，无推荐综艺数据");initTopics(configData.recomTopics),$(document).on("tap",".js_link",function(){var t=$(this).data("link");t&&(t=M.fixUrl(t),$.browser.music?M.client.open("ui","openUrl",{url:t}):setTimeout(function(){location.href=t},100))})}else if("rank"==t){if(!(configData.rankInfo.no&&configData.rankInfo.ids&&configData.rankInfo.ids.length))return void M.alert("页面数据错误，无榜单数据");initRanks(configData.rankInfo)}initPlayer()}function initPlayer(){function t(t){if(t){var n=$('.js_playsong[data-id="'+t+'"]').addClass("pause");$(".js_playsong").not(n).removeClass("pause").find("svg use").attr("xlink:href","#icon_play"),n.find("svg use").attr("xlink:href","#icon_pause")}else $(".js_playsong").removeClass("pause").find("svg use").attr("xlink:href","#icon_play")}$.browser.music&&M.client.open("media","getCurrentSong",{list:0},function(n){n&&0==n.code&&n.data&&"playing"==n.data.state&&n.data.list&&n.data.list[0]?t(n.data.list[0].songid):t()}),$(document).on("tap",".js_playsong",function(){if("music"==M.getParam("playtarget")&&!$.browser.music)return void M.client.open("ui","openUrl",{url:location.href});var t=$(this).data("id");t&&M.player.play(t,{index:0})}),M.player.on("play pause ended",function(){"playing"==this.state&&(this.songId||this.songUrl)?t(this.songId):t()})}var voteUtils={getVotes:function(t,n,i){M.ajax({type:"get",url:location.protocol+"//c.y.qq.com/share/fcgi-bin/vote/fcg_get_votes_yxh.fcg",data:{no:t,idlist:n,type:2,format:"json"},dataType:"json",success:function(t){0==t.code&&t.result?i&&i(t):showError("服务器繁忙，获取投票数据失败")},error:function(){showError("网络繁忙，获取投票数据失败！")}})},submitVote:function(t,n,i,s){M.ajax({type:"get",url:location.protocol+"//c.y.qq.com/share/fcgi-bin/vote/fcg_add_vote_yxh.fcg",data:{no:t,id:n,num:i,idlist:n,type:2,format:"json"},dataType:"json",success:function(t){var n;return 2==t.code?doLogin():(n=0==t.code&&t.result?"":6==t.code?"本活动已结束":5==t.code?"活动未开始":4==t.code?"超过今日的投票数限制":"投票失败",void(s&&s(n,t)))},error:function(){err="投票失败",s&&s(err)}})},renderVotePanel:function(t,n,i,s){$("#js_vote_panel_submit").attr("data-voteid",n).attr("data-voteno",t).attr("data-usrlimit",i),$("#js_vote_panel_ticket").text(i),$("#js_vote_panel_input").attr("data-usrlimit",i).val(1),$("#js_vote_panel_title").text(s),$("#js_vote_panel").show()}};init(M.getParam("type"));;
+</script>
+
+
+<div class="gmu-media-detect" id="gmu-media-detect0"></div></body>
